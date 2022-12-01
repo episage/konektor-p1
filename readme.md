@@ -55,7 +55,7 @@ Developer, powinien moc z latwoscia zintegrowac sie z systemem P1.
 
 ```mermaid
 graph TD
-    A(System informatyczny laboratorium) -->|Wynik badan laboratoryjnych| B("Polska Szyna Integracyjna P1")
+    A(System informatyczny laboratorium) -->|Wynik badan laboratoryjnych| B("KP1")
     B -->|"Informacja o wyniku (ITI-42)"| C
     B -->|"Aktualizacja informacji o wyniku (ITI-57)"| C
     B -->|"Wysylka logow dostepowych (ITI-20)"| C
