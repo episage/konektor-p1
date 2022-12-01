@@ -70,4 +70,4 @@ ITI-1 to po prostu synchronizacja czasu, np. za pomoca ntpd.
 
 ## Rozwoj
 
-Zapraszam do forkowania tego repo, dyskusji i kontrybucji. Bede mergowal na bierzaco.
+Zapraszam do forkowania tego repo, dyskusji i kontrybucji.
