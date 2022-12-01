@@ -9,7 +9,6 @@ Otwarto-zrodlowa implementacja konektora do [systemeu P1 (System e-zdrowie)](htt
 
 ## Motywacja
 
-Celem tej implementacji jest umozliwienie **efektywnej** integracji juz istniejacego oprogramowania medycznego z P1.
 Na rynku istnieja gotowe rozwiazania od ASSECO, KAMSOFT, CREAMSOFT i innych, ktore sa zamkniete i drogie. 
 Dodatkowo dokumentacja P1 jest:
  - trudna w zrozumieniu
@@ -19,11 +18,12 @@ Dodatkowo dokumentacja P1 jest:
  - wymaga dzialania na systemie Windows, wsparcie dla MacOS jest nieuzyteczne
  - wymaga niezwykle doglebnej wiedzy w zakresie HL7, SOAP, WSS
 
-Dodatkowo praca w innym jezyku programowania niz Java jest mocno utrudniona ze wzgledu na nie-do-konca kompatybilne narzedzia w innych jezykach (.NET svcutil.exe i inne).
+Oprocz tego praca w innym jezyku programowania niz Java jest mocno utrudniona ze wzgledu na nie-do-konca kompatybilne narzedzia w innych jezykach (.NET svcutil.exe i inne).
 
 ## Cel
 
-Ten projekt ma na celu wyjsc na przekor przeciwnosciom jakie zostaly utworzone przez CEZ i zaoferowac rozwiazanie all-in-one.
+Celem tej implementacji jest umozliwienie **efektywnej** integracji juz istniejacego oprogramowania medycznego z P1.
+Ten projekt chce wyjsc na przekor przeciwnosciom jakie zostaly utworzone przez CEZ i zaoferowac rozwiazanie all-in-one.
 
 ## Architektura tego projektu
 
