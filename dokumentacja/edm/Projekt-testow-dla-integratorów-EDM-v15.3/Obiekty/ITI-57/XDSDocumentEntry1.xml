@@ -1,0 +1,265 @@
+				<!-- Główny element indeksu dokumentu medycznego -->
+				<rim:ExtrinsicObject id="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~" 
+									 lid="@@DocumentEntryLID1@@~{urn:uuid:575ae42c-1111-1111-1111-9f4cef3e3c24}~"
+									 objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1" 
+									 mimeType="text/plain"
+									 status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved">
+					<!-- Data wystawienia dokumentu -->
+					<rim:Slot name="creationTime">
+						<rim:ValueList>
+							<rim:Value>@@CreationTime@@~{20190113100339}~</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- Kustosz dokumentacji -->
+					<rim:Slot name="repositoryUniqueId">
+						<rim:ValueList>
+							<rim:Value>@@repositoryUniqueId@@~{2.16.840.1.113883.3.4424.7.24.1}~</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- Status dostępności dokumentu -->
+					<rim:Slot name="documentAvailability">
+					  <rim:ValueList>
+						<rim:Value>urn:ihe:iti:2010:DocumentAvailability:Online</rim:Value>
+					  </rim:ValueList>
+					</rim:Slot>
+					<!-- Kod języka dokumentu -->
+					<rim:Slot name="languageCode">
+						<rim:ValueList>
+							<rim:Value>pl-PL</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- Rozmiar dokumentu -->
+					<rim:Slot name="size">
+						<rim:ValueList>
+							<rim:Value>4</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- Skrót dokumentu -->
+					<rim:Slot name="hash">
+						<rim:ValueList>
+							<rim:Value>da39a3ee5e6b4b0d3255bfef95601890afd80709</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- rozszerzenie PL - Kategoria brakowania dokumentu - KKM -->
+					<rim:Slot name="urn:extpl:SlotName:StorageCategory">
+						<rim:ValueList>
+							<rim:Value>2020</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- rozszerzenie PL - Identyfikator zdarzenia medycznego - KKM -->
+					<rim:Slot name="urn:extpl:SlotName:MedicalEventId">
+						<rim:ValueList>
+							<rim:Value>@@MedicalEventID@@~{123456789123456789123456789123456789}~^^^&amp;@@MedicalEventOID@@~{2.16.840.1.113883.3.4424.2.7.1.15.1}~&amp;ISO^urn:ihe:iti:xds:2015:encounterId</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- Nazwa pliku dokumentu medycznego -->
+					<rim:Slot name="URI">
+						<rim:ValueList>
+							<rim:Value>Badanie.xml</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- Czas rozpoczęcia procedury -->
+					<rim:Slot name="serviceStartTime">
+						<rim:ValueList>
+							<rim:Value>20190113093000</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- Czas zakończenia procedury -->
+					<rim:Slot name="serviceStopTime">
+						<rim:ValueList>
+							<rim:Value>20190113100000</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- Identyfikator pacjenta w systemie usługodawcy -->
+					<rim:Slot name="sourcePatientId">
+						<rim:ValueList>
+							<rim:Value>P123456789^^^&amp;2.16.840.1.113883.3.4424.2.7.1.17.1&amp;ISO</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- Dane osobowe pacjenta -->
+					<rim:Slot name="sourcePatientInfo">
+						<rim:ValueList>
+							<rim:Value>PID-5|Malinowski^Andrzej^^^^^^</rim:Value>
+							<rim:Value>PID-7|19560527</rim:Value>
+							<rim:Value>PID-8|M</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<!-- Wystawca dokumentu -->
+					<rim:Slot name="legalAuthenticator"> 
+						<rim:ValueList> 
+							<rim:Value>@@legalAuthenticator1@@~{22334455^Kleofas^Wasaty^^^Lek. med.^^^&amp;2.16.840.1.113883.3.4424.1.6.2&amp;ISO}~</rim:Value> 
+						</rim:ValueList> 
+					</rim:Slot>
+					<rim:Name>
+						<rim:LocalizedString value="Physical"/>
+					</rim:Name>
+					<rim:Description/>
+					<!-- Autor dokumentu - KKM -->
+					<rim:Classification classifiedObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~" 
+										nodeRepresentation="" 
+										classificationScheme="urn:uuid:93606bcf-9494-43ec-9b4e-a7748d1a838d" 
+										objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" 
+										id="id_1">
+						<!-- Dane osobowe autora -->
+						<rim:Slot name="authorPerson">
+							<rim:ValueList>
+								<rim:Value>@@authorPerson1@@~{22334455^Brzęczek^Szymon^^^Lek. med.^^^&amp;2.16.840.1.113883.3.4424.1.6.2&amp;ISO}~</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<!-- Instytucja, którą autor reprezentuje -->
+						<rim:Slot name="authorInstitution">
+							<rim:ValueList>
+								<rim:Value>@@authorInstitution1@@~{Szpital Bielański^^^^^&amp;2.16.840.1.113883.3.4424.2.3.1&amp;ISO^^^^000000001027}~</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<!-- Role autora -->
+						<rim:Slot name="authorRole">
+							<rim:ValueList>
+								<rim:Value>Administrator</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<!-- Specjalizacje autora -->
+						<rim:Slot name="authorSpecialty">
+							<rim:ValueList>
+								<rim:Value>Chirurgia</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<!-- Dane kontaktowe autora -->
+						<rim:Slot name="authorTelecommunication">
+							<rim:ValueList>
+								<rim:Value>@@authorTelecommunication1@@~{^EMR^PH^^^^^^^^^693112233}~</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>						
+					</rim:Classification>
+					<!-- Typ dokumentu wg słownika P1 -->
+					<rim:Classification classifiedObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~" 
+										nodeRepresentation="@@typDokumentuP1_kod@@~{06.10}~" 
+										classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a" 
+										objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" 
+										id="id_2">
+						<!-- Nazwa słownika -->
+						<rim:Slot name="codingScheme">
+							<rim:ValueList>
+								<rim:Value>@@typDokumentuP1@@~{Typy dokumentów P1}~</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<rim:Name>
+							<rim:LocalizedString value="Karta informacyjna leczenia szpitalnego"/>
+						</rim:Name>
+					</rim:Classification>
+					<!-- Procedury, w wyniku wykonania których powstał dokument -->
+					<rim:Classification classifiedObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~" 
+										nodeRepresentation="00.03" 
+										classificationScheme="urn:uuid:2c6b8cb7-8b2a-4051-b291-b1ae6a575ef4" 
+										objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" 
+										id="id_3">
+						<!-- Nazwa słownika -->
+						<rim:Slot name="codingScheme">
+							<rim:ValueList>
+								<rim:Value>ICD-9 PL</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<rim:Name>
+							<rim:LocalizedString value="DENY ACCESS TO ALL POLICY"/>
+						</rim:Name>
+					</rim:Classification>
+					<!-- Poziom poufności -->
+					<rim:Classification classifiedObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~" 
+										nodeRepresentation="@@ConfidentialityCode1@@~{N}~" 
+										classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f" 
+										objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" 
+										id="id_4">
+						<!-- Nazwa słownika -->
+						<rim:Slot name="codingScheme">
+							<rim:ValueList>
+								<rim:Value>2.16.840.1.113883.5.25</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<rim:Name>
+							<rim:LocalizedString value="normal"/>
+						</rim:Name>
+					</rim:Classification>
+					<!-- Format dokumentu -->
+					<rim:Classification classifiedObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~" 
+										nodeRepresentation="urn:extPL:pl-cda" 
+										classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d" 
+										objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" 
+										id="id_5">
+						<!-- Nazwa słownika -->
+						<rim:Slot name="codingScheme">
+							<rim:ValueList>
+								<rim:Value>Kody formatów P1</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<rim:Name>
+							<rim:LocalizedString value="PIK HL7 CDA"/>
+						</rim:Name>
+					</rim:Classification>
+					<!-- Specjalność komórki organizacyjnej -->
+					<rim:Classification classifiedObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~" 
+										nodeRepresentation="1008" 
+										classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1" 
+										objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" 
+										id="id_6">
+						<rim:Slot name="codingScheme">
+							<rim:ValueList>
+								<rim:Value>Specjalność komórki organizacyjnej</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<rim:Name>
+							<rim:LocalizedString value="Szpital uzdrowiskowy dla dzieci"/>
+						</rim:Name>
+					</rim:Classification>
+					<!-- Dziedzina medyczna usługodawcy -->
+					<rim:Classification classifiedObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~" 
+										nodeRepresentation="05" 
+										classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead" 
+										objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" 
+										id="id_7">
+						<!-- Nazwa słownika -->
+						<rim:Slot name="codingScheme">
+							<rim:ValueList>
+								<rim:Value>Dziedzina medyczna</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<rim:Name>
+							<rim:LocalizedString value="Okulistyka"/>
+						</rim:Name>
+					</rim:Classification>
+					<!-- Typ dokumentu wg słownika LOINC -->
+					<rim:Classification classifiedObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~" 
+										nodeRepresentation="@@typDokumentuLOINC_kod@@~{10006-5}~" 
+										classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983" 
+										objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" 
+										id="id_8">
+						<!-- Nazwa słownika -->
+						<rim:Slot name="codingScheme">
+							<rim:ValueList>
+								<rim:Value>@@typDokumentuLOINC@@~{LOINC}~</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<rim:Name>
+							<rim:LocalizedString charset="UTF-8" value="Conference Evaluation Note" xml:lang="pl-PL"/>
+						</rim:Name>
+					</rim:Classification>
+					<!-- Dane usługobiorcy - identyfikator -->
+					<rim:ExternalIdentifier value="@@PatientID@@~{P123456789^^^&amp;2.16.840.1.113883.3.4424.2.7.1.17.1&amp;ISO}~" 
+											identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427" 
+											objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" 
+											id="id_9" 
+											registryObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~">
+						<rim:Name>
+							<rim:LocalizedString value="XDSDocumentEntry.patientId"/>
+						</rim:Name>
+					</rim:ExternalIdentifier>
+					<!-- Identyfikator zaindeksowanego dokumentu -->
+					<rim:ExternalIdentifier value="@@XDSDocumentEntry_uniqueId1@@~{2.16.840.1.113883.3.4424.2.7.12345678^987654321}~" 
+											identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab" 
+											objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" 
+											id="id_10" 
+											registryObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~">
+						<rim:Name>
+							<rim:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+						</rim:Name>
+					</rim:ExternalIdentifier>
+				</rim:ExtrinsicObject>

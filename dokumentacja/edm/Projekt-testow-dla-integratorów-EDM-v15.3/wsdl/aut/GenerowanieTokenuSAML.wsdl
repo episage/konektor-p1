@@ -1,0 +1,51 @@
+<wsdl:definitions
+        name="GenerowanieTokenuSAML"
+        targetNamespace="http://csioz.gov.pl/p1/aut/ws/v1"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://csioz.gov.pl/p1/aut/ws/v1" 
+        xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512/"
+        xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+	<wsdl:import location="../common/policies.wsdl" namespace="http://csioz.gov.pl/p1/wsp/v1"/>
+	<wsdl:types>
+		<xs:schema>
+			<xs:import namespace="http://docs.oasis-open.org/ws-sx/ws-trust/200512/" schemaLocation="ws-trust-1.3.xsd"/>
+			<xs:import namespace="urn:oasis:names:tc:SAML:2.0:assertion" schemaLocation="../common/saml-schema-assertion-2.0.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="RequestSecurityTokenMsg">
+		<wsdl:part name="request" element="wst:RequestSecurityToken"/>
+	</wsdl:message>
+	<wsdl:message name="RequestSecurityTokenResponseCollectionMsg">
+		<wsdl:part name="responseCollection" element="wst:RequestSecurityTokenResponseCollection" />
+	</wsdl:message>
+
+	<wsdl:portType name="GenerowanieTokenuSAMLWS">
+		<wsdl:operation name="generujToken">
+			<wsdl:input name="RequestSecurityTokenMsg" message="tns:RequestSecurityTokenMsg" wsam:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/Issue" />
+			<wsdl:output name="RequestSecurityTokenResponseCollectionMsg" message="tns:RequestSecurityTokenResponseCollectionMsg" wsam:Action="http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTRC/IssueFinal" />
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="GenerowanieTokenuSAMLWS" type="tns:GenerowanieTokenuSAMLWS">
+		<wsdl:documentation>Interfejs udostępnia operację generowania tokenu SAML</wsdl:documentation>
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="generujToken">
+			<soap:operation style="document" />
+			<wsdl:input name="RequestSecurityTokenMsg">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="RequestSecurityTokenResponseCollectionMsg">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	
+	<wsdl:service name="GenerowanieTokenuSAML">
+		<wsdl:port name="GenerowanieTokenuSAMLWS" binding="tns:GenerowanieTokenuSAMLWS">
+			<soap:address location="www.exampleLocation.com/Port1" />
+		</wsdl:port>
+	</wsdl:service>
+        
+</wsdl:definitions>

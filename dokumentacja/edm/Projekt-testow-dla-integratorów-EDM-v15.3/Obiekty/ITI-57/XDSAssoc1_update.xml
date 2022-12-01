@@ -1,0 +1,21 @@
+				<!-- Asocjacje SubmissionSet -> DocumentEntry -->
+				<rim:Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember"
+								 id="@@XDSAssociationID1_SSDE_upd@@~{f04988a0-1111-4dff-b660-1f5c78c622c0}~"
+								 sourceObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~"
+								 targetObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~">
+					<rim:Slot name="SubmissionSetStatus">
+						<rim:ValueList>
+							<rim:Value>Original</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<rim:Slot name="PreviousVersion">
+						<rim:ValueList>
+							<rim:Value>1</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<rim:Slot name="AssociationPropagation">
+						<rim:ValueList>
+							<rim:Value>no</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+				</rim:Association>

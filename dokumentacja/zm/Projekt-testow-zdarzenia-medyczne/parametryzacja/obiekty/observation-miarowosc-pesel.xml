@@ -1,0 +1,44 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="@@profilDanePOZ@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLAnthropometricMeasurements}~"/>
+		<security>
+			<system value="@@poziomPoufnosciSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.83}~"/>
+			<code value="@@poziomPoufnosciKod@@~{N}~"/>
+		</security>
+	</meta>
+	<status value="@@statusDanePOZ@@~{final}~"/>
+	<code>
+		<coding>
+			<system value="urn:oid:2.16.840.1.113883.3.4424.11.2.6"/>
+			<code value="89.59"/>
+			<display value="Inne nieinwazyjne badania serca i układu naczyniowego"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/@@patientId@@~{XX}~"/>
+		<type value="Patient"/>
+		<identifier>
+			<system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+			<value value="@@identyfikatorPacjenta@@~{12300509785}~"/>
+		</identifier>
+	</subject>
+	<encounter>
+		<reference value="Encounter/@@encounterId@@~{XX}~"/>
+		<type value="Encounter"/>
+	</encounter>
+	<effectiveDateTime value="@@effectiveDateTime@@~{2021-06-30T23:34:59.141+02:00}~"/>
+	<performer>
+		<identifier>
+			<system value="@@pracownikOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.6.2}~"/>
+			<value value="@@pracownikIdentyfikator@@~{9438715}~"/>
+		</identifier>
+		<display value="@@pracownikImieNazwisko@@~{Marzena Lttd}~"/>
+	</performer>
+	<valueCodeableConcept>
+		<coding>
+			<system value="@@miarowoscPacjentaSystem@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.122}~"/>
+			<code value="@@miarowoscPacjentaKod@@~{1}~"/>
+			<display value="@@miarowoscPacjentaDisplay@@~{Rytm serca miarowy}~"/>
+		</coding>
+	</valueCodeableConcept>
+</Observation>

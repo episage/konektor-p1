@@ -1,0 +1,44 @@
+<soapenv:Envelope xmlns:soapenv="http://www.w3.org/2003/05/soap-envelope">
+    <soapenv:Body>
+        <lcm:SubmitObjectsRequest xmlns:lcm="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0">
+            <rim:RegistryObjectList xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0">
+                <rim:RegistryPackage id="urn:uuid:481004dd-b83f-49da-b0c1-aa255aad7e9d">
+					<rim:Slot name="urn:extpl:SlotName:authorPerson">
+                        <rim:ValueList>
+                            <rim:Value>5223344^Brzęczek^Szymon^^^Lek. med.^^^&amp;2.16.840.1.113883.3.4424.1.6.2&amp;ISO</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Slot name="urn:extpl:SlotName:authorInstitution">
+                        <rim:ValueList>
+                            <rim:Value>Szpital Bielański^^^^^&amp;2.16.840.1.113883.3.4424.2.3.1&amp;ISO^^^^000000001027</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Classification classificationScheme="urn:extpl:ClassificationScheme:UpdateDocumentAvailability" classifiedObject="urn:uuid:481004dd-b83f-49da-b0c1-aa255aad7e9d" id="id_1" nodeRepresentation="" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+                        <rim:Slot name="XDSDocumentEntry.uniqueId">
+                            <rim:ValueList>
+                                <rim:Value>2.16.840.1.113883.3.4424.2.7.778^9973396.8071068</rim:Value>
+                            </rim:ValueList>
+                        </rim:Slot>
+                        <rim:Slot name="documentAvailability">
+                            <rim:ValueList>
+                                <rim:Value>urn:ihe:iti:2010:DocumentAvailability:Offline</rim:Value>
+                            </rim:ValueList>
+                        </rim:Slot>
+                    </rim:Classification>
+                    <rim:Classification classificationScheme="urn:extpl:ClassificationScheme:UpdateDocumentAvailability" classifiedObject="urn:uuid:481004dd-b83f-49da-b0c1-aa255aad7e9d" id="id_2" nodeRepresentation="" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+                        <rim:Slot name="XDSDocumentEntry.uniqueId">
+                            <rim:ValueList>
+                                <rim:Value>2.16.840.1.113883.3.4424.2.7.778^2239431.6155718</rim:Value>
+                            </rim:ValueList>
+                        </rim:Slot>
+                        <rim:Slot name="documentAvailability">
+                            <rim:ValueList>
+                                <rim:Value>urn:ihe:iti:2010:DocumentAvailability:Online</rim:Value>
+                            </rim:ValueList>
+                        </rim:Slot>
+                    </rim:Classification>
+                </rim:RegistryPackage>
+            </rim:RegistryObjectList>
+        </lcm:SubmitObjectsRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

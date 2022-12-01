@@ -1,0 +1,59 @@
+<wsdl:definitions
+        name="WeryfikacjaDostepuDoDanych"
+        targetNamespace="http://csioz.gov.pl/p1/aut/ws/v1"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://csioz.gov.pl/p1/aut/ws/v1"
+		xmlns:wsp="http://www.w3.org/ns/ws-policy"
+        xmlns:xacml-samlp="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:protocol:wd-13"
+        xmlns:xacml-saml="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13"        
+        xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+	<wsdl:import location="../common/policies.wsdl" namespace="http://csioz.gov.pl/p1/wsp/v1"/>
+
+	<wsdl:types>
+		<xs:schema targetNamespace="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13">
+			<xs:include schemaLocation="xacml-3.0-profile-saml2.0-v2-schema-assertion-wd-13.xsd"/>
+			<xs:element name="XACMLAuthzDecisionStatementResponse" type="xacml-saml:XACMLAuthzDecisionStatementType"/>
+		</xs:schema>
+		<xs:schema targetNamespace="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:protocol:wd-13">
+			<xs:include schemaLocation="xacml-3.0-profile-saml2.0-v2-schema-protocol-wd-13.xsd"/>
+			<xs:element name="XACMLAuthzDecisionQueryRequest" type="xacml-samlp:XACMLAuthzDecisionQueryType"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="XACMLAuthzDecisionQueryMsg">
+		<wsdl:part name="request" element="xacml-samlp:XACMLAuthzDecisionQueryRequest" />
+	</wsdl:message>
+	<wsdl:message name="XACMLAuthzDecisionStatementMsg">
+		<wsdl:part name="response" element="xacml-saml:XACMLAuthzDecisionStatementResponse"/>
+	</wsdl:message>
+
+	<wsdl:portType name="WeryfikacjaDostepuDoDanychWS">
+		<wsdl:operation name="weryfikujDostepDoDanych">
+			<wsdl:input name="XACMLAuthzDecisionQueryMsg" message="tns:XACMLAuthzDecisionQueryMsg" />
+			<wsdl:output name="XACMLAuthzDecisionStatementMsg" message="tns:XACMLAuthzDecisionStatementMsg"  />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="WeryfikacjaDostepuDoDanychWS" type="tns:WeryfikacjaDostepuDoDanychWS">
+		<wsdl:documentation>Interfejs udostępnia operację weryfikowania dostępu do danych</wsdl:documentation>
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="weryfikujDostepDoDanych">
+			<soap:operation soapAction="urn:weryfikujDostepDoDanych" style="document"/>
+			<wsdl:input name="XACMLAuthzDecisionQueryMsg">
+				<soap:body use="literal" />
+				<wsp:PolicyReference URI="#wss_ds_assertion_policy"/>
+			</wsdl:input>
+			<wsdl:output name="XACMLAuthzDecisionStatementMsg">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	
+	<wsdl:service name="WeryfikacjaDostepuDoDanych">
+		<wsdl:port name="WeryfikacjaDostepuDoDanychWS" binding="tns:WeryfikacjaDostepuDoDanychWS">
+			<soap:address location="www.exampleLocation.com/Port1" />
+		</wsdl:port>
+	</wsdl:service>
+        
+</wsdl:definitions>

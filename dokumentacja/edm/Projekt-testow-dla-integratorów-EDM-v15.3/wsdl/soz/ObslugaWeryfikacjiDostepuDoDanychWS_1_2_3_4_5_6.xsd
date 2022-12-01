@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema attributeFormDefault="unqualified" blockDefault="substitution" elementFormDefault="unqualified" targetNamespace="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:protocol:wd-13" version="wd 12" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xacml-context="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:xacml-saml="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:xacml="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:xacml-samlp="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:protocol:wd-13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <annotation>
+    <documentation>Document identifier: xacml-3.0-profile-saml2.0-v2-schema-protocol-wd-13
+          Location: TBD</documentation>
+  </annotation>
+  <import namespace="urn:oasis:names:tc:SAML:2.0:protocol" schemaLocation="ObslugaWeryfikacjiDostepuDoDanychWS_1_2_3_4_5_6_7.xsd"/>
+  <import namespace="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" schemaLocation="ObslugaWeryfikacjiDostepuDoDanychWS_1_2_3_4.xsd"/>
+  <import namespace="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13" schemaLocation="ObslugaWeryfikacjiDostepuDoDanychWS.xsd"/>
+  <element name="XACMLAuthzDecisionQuery" xsi:type="xacml-samlp:XACMLAuthzDecisionQueryType"/>
+  <complexType name="XACMLAuthzDecisionQueryType">
+    <complexContent>
+      <extension base="samlp:RequestAbstractType">
+        <sequence>
+          <element ref="xacml-context:Request"/>
+          <element minOccurs="0" ref="xacml-samlp:AdditionalAttributes"/>
+          <element maxOccurs="unbounded" minOccurs="0" ref="xacml-context:Policy"/>
+          <element maxOccurs="unbounded" minOccurs="0" ref="xacml-context:PolicySet"/>
+          <element minOccurs="0" ref="xacml-saml:ReferencedPolicies"/>
+          <element minOccurs="0" ref="xacml-samlp:Extensions"/>
+        </sequence>
+        <attribute default="false" name="InputContextOnly" type="boolean" use="optional"/>
+        <attribute default="false" name="ReturnContext" type="boolean" use="optional"/>
+        <attribute default="true" name="CombinePolicies" type="boolean" use="optional"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="AdditionalAttributes" xsi:type="xacml-samlp:AdditionalAttributesType"/>
+  <complexType name="AdditionalAttributesType">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" ref="xacml-samlp:AssignedAttributes"/>
+    </sequence>
+  </complexType>
+  <element name="Extensions" xsi:type="xacml-samlp:ExtensionsType"/>
+  <complexType name="ExtensionsType">
+    <sequence>
+      <any maxOccurs="unbounded" minOccurs="0" namespace="##any" processContents="strict"/>
+    </sequence>
+  </complexType>
+  <element name="AssignedAttributes" xsi:type="xacml-samlp:AssignedAttributesType"/>
+  <complexType name="AssignedAttributesType">
+    <sequence>
+      <element ref="xacml-samlp:Holders"/>
+      <element ref="xacml-samlp:HolderAttributes"/>
+    </sequence>
+  </complexType>
+  <element name="Holders" xsi:type="xacml-samlp:HoldersType"/>
+  <complexType name="HoldersType">
+    <sequence>
+      <element maxOccurs="unbounded" ref="xacml-context:Match"/>
+    </sequence>
+  </complexType>
+  <element name="HolderAttributes" xsi:type="xacml-samlp:HolderAttributesType"/>
+  <complexType name="HolderAttributesType">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" ref="xacml-context:Attribute"/>
+    </sequence>
+  </complexType>
+  <element name="XACMLPolicyQuery" xsi:type="xacml-samlp:XACMLPolicyQueryType"/>
+  <complexType name="XACMLPolicyQueryType">
+    <complexContent>
+      <extension base="samlp:RequestAbstractType">
+        <choice maxOccurs="unbounded">
+          <element ref="xacml-context:Request"/>
+          <element ref="xacml-context:PolicySetIdReference"/>
+          <element ref="xacml-context:PolicyIdReference"/>
+        </choice>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>

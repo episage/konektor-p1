@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions targetNamespace="http://csioz.gov.pl/p1/wsp/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+    <wsp:Policy wsu:Id="wss_ds_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                    <wsp:Policy>
+                        <sp:InitiatorToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                                    <wsp:Policy>
+                                        <sp:WssX509V3Token10 />
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:InitiatorToken>
+                        <sp:RecipientToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:WssX509V3Token10 />
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:RecipientToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic256Sha256Rsa15 />
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax />
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:OnlySignEntireHeadersAndBody />
+                    </wsp:Policy>
+                </sp:AsymmetricBinding>
+                <sp:Wss10 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                    <wsp:Policy>
+                        <sp:MustSupportRefKeyIdentifier />
+                        <sp:MustSupportRefIssuerSerial />
+                    </wsp:Policy>
+                </sp:Wss10>
+                <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                    <sp:Body />
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="wss_ds_assertion_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                    <wsp:Policy>
+                        <sp:InitiatorToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                                    <wsp:Policy>
+                                        <sp:WssX509V3Token10 />
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:InitiatorToken>
+                        <sp:RecipientToken>
+                            <wsp:Policy>
+                                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                                    <wsp:Policy>
+                                        <sp:WssX509V3Token10 />
+                                    </wsp:Policy>
+                                </sp:X509Token>
+                            </wsp:Policy>
+                        </sp:RecipientToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic256Sha256Rsa15 />
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                        <sp:Layout>
+                            <wsp:Policy>
+                                <sp:Lax />
+                            </wsp:Policy>
+                        </sp:Layout>
+                        <sp:OnlySignEntireHeadersAndBody />
+                    </wsp:Policy>
+                </sp:AsymmetricBinding>
+                <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+                    <wsp:Policy>
+                        <sp:IssuedToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+                            <sp:RequestSecurityTokenTemplate>
+                                <t:TokenType xmlns:t="http://schemas.xmlsoap.org/ws/2005/02/trust">urn:oasis:names:tc:SAML:2.0:assertion</t:TokenType>
+                            </sp:RequestSecurityTokenTemplate>
+                            <wsp:Policy/>
+                        </sp:IssuedToken>
+                    </wsp:Policy>
+                </sp:SupportingTokens>
+                <sp:Wss10 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                    <wsp:Policy>
+                        <sp:MustSupportRefKeyIdentifier />
+                        <sp:MustSupportRefIssuerSerial />
+                    </wsp:Policy>
+                </sp:Wss10>
+                <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                    <sp:Body />
+                </sp:SignedParts>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+    <wsp:Policy wsu:Id="wss_assertion_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsp:ExactlyOne>
+            <wsp:All>
+                <sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+                    <wsp:Policy>
+                        <sp:InitiatorToken>
+                            <wsp:Policy>
+                                <wsp:All>
+                                    <sp:SamlToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                                        <wsp:Policy>
+                                            <sp:WssSamlV20Token11/>
+                                        </wsp:Policy>
+                                    </sp:SamlToken>
+                                </wsp:All>
+                            </wsp:Policy>
+                        </sp:InitiatorToken>
+                        <sp:RecipientToken>
+                            <wsp:Policy>
+                                <wsp:All>
+                                    <sp:SamlToken sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                                        <wsp:Policy>
+                                            <sp:WssSamlV20Token11/>
+                                        </wsp:Policy>
+                                    </sp:SamlToken>
+                                </wsp:All>
+                            </wsp:Policy>
+                        </sp:RecipientToken>
+                        <sp:AlgorithmSuite>
+                            <wsp:Policy>
+                                <sp:Basic256Sha256Rsa15 />
+                            </wsp:Policy>
+                        </sp:AlgorithmSuite>
+                    </wsp:Policy>
+                </sp:AsymmetricBinding>
+            </wsp:All>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</wsdl:definitions>

@@ -1,0 +1,58 @@
+<Provenance xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="@@profilPodpisu@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLMedicalEventProvenance}~"/>
+		<security>
+			<system value="@@poziomPoufnosciSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.83}~"/>
+			<code value="@@poziomPoufnosciKod@@~{N}~"/>
+		</security>
+	</meta>
+	<target>
+		<reference value="Patient/@@patientId@@~{XX}~"/>
+		<type value="Patient"/>
+	</target>
+	<target>
+		<reference value="Encounter/@@encounterId@@~{XX}~"/>
+		<type value="Encounter"/>
+	</target>
+	<target>
+		<reference value="Procedure/@@procedureId@@~{XX}~"/>
+		<type value="Procedure"/>
+	</target>
+	<target>
+		<reference value="Condition/@@conditionId@@~{XX}~"/>
+		<type value="Condition"/>
+	</target>
+	<target>
+		<reference value="Claim/@@claimId@@~{XX}~"/>
+		<type value="Claim"/>
+	</target>
+	<target>
+		<reference value="Coverage/@@coverageId@@~{XX}~"/>
+		<type value="Coverage"/>
+	</target>
+	<recorded value="@@podpisData@@~{2019-08-26T16:00:00+02:00}~"/>
+	<agent>
+		<who>
+			<identifier>
+				<system value="@@podmiotOID@@~{urn:oid:2.16.840.1.113883.3.4424.2.3.1}~"/>
+				<value value="@@podmiotIdentyfikator@@~{000000012106}~"/>
+			</identifier>
+		</who>
+	</agent>
+	<signature>
+		<type>
+			<system value="@@typPodpisuSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.86}~"/>
+			<code value="@@typPodpisuKod@@~{1.2.840.10065.1.12.1.14}~"/>
+		</type>
+		<when value="@@podpisData@@~{2019-08-26T16:00:00+02:00}~"/>
+		<who>
+			<identifier>
+				<system value="@@podmiotOID@@~{urn:oid:2.16.840.1.113883.3.4424.2.3.1}~"/>
+				<value value="@@podmiotIdentyfikator@@~{000000012106}~"/>
+			</identifier>
+		</who>
+		<targetFormat value="application/fhir+xml"/>
+		<sigFormat value="application/signature+xml"/>
+		<data value="@@binaryPodpis@@~{UHJ6eWvFgmFkb3d5IHBvZHBpcyBaZGFyemVuaWEgTWVkeWN6bmVnby4=}~"/>
+	</signature>
+</Provenance>

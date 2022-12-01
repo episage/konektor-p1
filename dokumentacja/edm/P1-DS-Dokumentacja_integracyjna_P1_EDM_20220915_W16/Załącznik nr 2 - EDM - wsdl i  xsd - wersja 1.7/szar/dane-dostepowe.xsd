@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://csioz.gov.pl/p1/szar/mt/v1" xmlns="http://csioz.gov.pl/p1/szar/mt/v1" xmlns:d="http://csioz.gov.pl/p1/szar/mt/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:element name="identyfikatorRepozytorium" type="d:IdentyfikatorRepozytoriumMT" />
+	<xs:element name="identyfikatorLokalny" type="d:IdentyfikatorLokalnyMT" />
+	<xs:element name="daneDostepowe" type="d:DaneDostepoweMT" />
+	<xs:element name="wynik" type="d:WynikOperacjiMT" />
+
+	<xs:element name="wymusUtworzenieNowegoRepozytorium" type="xs:boolean">
+		<xs:annotation>
+			<xs:documentation>
+				Jezeli ta flaga bedzie miała wartość TRUE spowoduje, że identyfikator zawsze będzie tworzony a nowe repozytorium rejestrowane.
+				W przeciwnym razie lub w razie pominięcia parametru spowoduje, że jeśli istnieje już zarejestowane repozytorium dla danego systemu, to nowe NIE będzie rejestrowane.
+			</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:complexType name="DaneDostepoweMT">
+		<xs:annotation>
+			<xs:documentation>Typ zawiera parametry oraz zestawy parametrów, które umożliwiają komunikację z repozytorium Elektronicznej Dokumentacji Medycznej.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element ref="d:identyfikatorRepozytorium"/>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="zestawParametrow" type="d:ZestawParametrowMT" minOccurs="0"/>
+				<xs:element name="parametr" type="ParametrMT" minOccurs="0"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ZestawParametrowMT">
+		<xs:annotation>
+			<xs:documentation>Zestaw powiązanych ze sobą parametrów.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="parametr" type="d:ParametrMT" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ParametrMT">
+		<xs:annotation>
+			<xs:documentation>Parametr.</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="klucz" type="d:KluczParametruMT" />
+		<xs:attribute name="wartosc" type="d:WartoscParametruMT" />
+	</xs:complexType>
+
+	<xs:simpleType name="IdentyfikatorRepozytoriumMT">
+		<xs:annotation>
+			<xs:documentation>Identyfikator repozytorium.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1" />
+			<xs:maxLength value="256" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="KluczParametruMT">
+		<xs:annotation>
+			<xs:documentation>Klucz parametru.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1" />
+			<xs:maxLength value="100" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="WartoscParametruMT">
+		<xs:annotation>
+			<xs:documentation>Wartość parametru.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1" />
+			<xs:maxLength value="1000" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="WynikOperacjiMT">
+		<xs:annotation>
+			<xs:documentation>Wynik operacji.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="status" type="d:StatusOperacjiEnumMT"/>
+			<xs:element name="opis" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Opis przesyłany w przypadku błędu.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="StatusOperacjiEnumMT">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SUKCES" />
+			<xs:enumeration value="BLAD" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="IdentyfikatorLokalnyMT">
+		<xs:annotation>
+			<xs:documentation>Identyfikator lokalny.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+</xs:schema>

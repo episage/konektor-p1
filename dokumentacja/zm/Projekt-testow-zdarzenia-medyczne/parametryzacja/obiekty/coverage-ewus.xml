@@ -1,0 +1,56 @@
+<Coverage xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementEWUS"/>
+	<security>
+         <system value="urn:oid:2.16.840.1.113883.3.4424.11.1.83"/>
+         <code value="N"/>
+      </security>
+	</meta>
+	<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementEncounterReference">
+		<valueReference>
+			<reference value="Encounter/@@encounterId@@~{XX}~"/>
+			<type value="Encounter"/>			
+		</valueReference>
+	</extension>
+	<status value="active"/>
+	<type>
+		<coding>
+			<system value="urn:oid:2.16.840.1.113883.3.4424.11.1.93"/>
+			<code value="EL"/>
+			<display value="świadczeniobiorca, którego prawo do świadczeń opieki zdrowotnej zostało potwierdzone dokumentem elektronicznym, o którym mowa w art. 50 ust. 3 ustawy"/>
+		</coding>
+	</type>
+	<beneficiary>
+		<reference value="Patient/@@patientId@@~{XX}~"/>
+		<type value="Patient"/>
+		<identifier>
+			<system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+			<value value="@@identyfikatorPacjenta@@~{12300509785}~"/>
+		</identifier>
+	</beneficiary>
+	<period>
+		<start value="@@coverageDataStart@@~{2019-08-26T10:00:00+02:00}~"/>
+		<end value="2025-08-26T16:00:00+02:00"/>
+	</period>
+	<payor>
+		<identifier>
+			<system value="@@platnikOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+			<value value="@@platnikIdentyfikator@@~{40010151673}~"/>
+		</identifier>
+	</payor>
+	<class>
+		<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementDocumentDate">
+			<valueDateTime value="@@coverageData@@~{2019-08-26T10:00:00+02:00}~"/>
+		</extension>
+		<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementDocumentIdentifier">
+			<valueString value="12345678"/>
+		</extension>	
+		<type>
+			<coding>
+				<system value="urn:oid:2.16.840.1.113883.3.4424.11.1.92"/>
+				<code value="DE"/>
+			</coding>
+		</type>
+		<value value="01"/>
+	</class>
+</Coverage>

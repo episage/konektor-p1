@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html xmlns=http://www.w3.org/1999/xhtml xml:lang=pl lang=pl slick-uniqueid=3><!--
+ Page saved with SingleFile 
+ url: https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/visualization.html 
+ saved date: Thu Dec 01 2022 13:54:11 GMT+0100 (Central European Standard Time)
+--><meta charset=utf-8>
+<title>Wizualizacja: plcda- Zestawienie DECOR (elementy danych, kody, OIDy i reguły)</title>
+<style>*{font-family:Verdana,Arial,sans-serif;font-size:12px;font-weight:normal;color:#333333}:focus{outline:none}h1{font-size:16px;font-weight:bold;color:#e16e22}h2{font-size:14px;font-weight:bold;background-color:#ece9e4;color:#e16e22;width:auto}h3{font-size:12px;font-weight:bold;background-color:#ece9e4;padding-top:4px;padding-bottom:4px;padding-left:8px;color:#7a6e62;width:auto}a{font:inherit;color:inherit}a:link{color:green}a:visited{color:green}a:hover{color:red}a:active{color:yellow}div{margin-left:0px;margin-right:0px;margin-top:0px;margin-bottom:4px;text-align:left;vertical-align:top}table.title{border:0px;margin:0px;padding:0px;width:100%}b{font:inherit;font-weight:bold;color:inherit}i{font:inherit;font-style:italic;color:inherit}#TabbedPanel{border-bottom:1px solid #CCCCCC;margin:0;padding:0;float:left;clear:none;width:100%}#TabbedPanel li{display:inline;border-top:.1em solid #CCCCCC;border-left:.1em solid #CCCCCC;border-right:.1em solid #CCCCCC;-moz-user-select:none;-moz-border-top-left-radius:5px;-moz-border-top-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;position:relative;top:1px;float:left;padding:4px 10px;margin:0px 1px 0px 0px;font:bold 12px sans-serif;list-style:none;cursor:pointer}#TabbedPanel li a{font:inherit;text-decoration:none;padding:0.25em 1em;color:#FFFFFF}.TabbedPanelsTabSelected,.TabbedPanelsTabNotSelected:hover{border-bottom:5px solid #e16e22;background-color:#e16e22;color:white}.TabbedPanelsTabNotSelected{border-bottom:.1em solid #7a6e62;background-color:#7a6e62;color:white}.TabbedPanelsContent{padding:30px 10px;background-color:#F6F3EE}</style>
+<link href="data:image/vnd.microsoft.icon;base64,AAABAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8AAFD4APjw8ACIqOAA6ODYADh42AA4UNAAoODIAFC4yADIsMgAiICoAEBAmABA2HgAiFhwANiYaAAAAAAA///////////////////////////////////////////////////////0reT/////////////////nd3dT///////////9O7//93d3a///////////07uT/nd3d3f///////////u7u/03d3dr///////////7u5P/63d3Z8zP////////0Tp///63dnzYRP////3n///9P9//0//8REW////u7tZ//8xgRP///ERFf//lru7tp/4ERERj/8zEVP//2u7u7u/NRERERj3//T///q7u7u7s1EREREV//9HT/9Lu7u7u7VREREREX/0zMxP+7u7u7u2ERERERH//MzMf/a7u7u7sxERERERT8zMzM/5u7u7u78RERERE/98zMzP/6u7u7uf9REREV//TMzMf//5W7uv//SBEVNP//fMx/////+f////9PT/Tu////////////////f/9O7u//////////////////7u7v/////////////3zH/+7u7/////////////zMzH/+7k////////////98zMzP////////////////zMzMxP///////////////8zMzM////////////////98zMx/////////////////98zH//////////////////////////////////////////////////////////////////4P///8B//+PAf//BgH//wYB//8HAR//D4IP5+3eD8DwPg8AYBwPAEALvgAADxwAAAYGAAAOBgAABAYAQAwHAGAcB4HgHg/3+sf///uD////g///4YP//8DD//+A////gH///4D///+A////wf////////////w==" rel="shortcut icon" type=image/x-icon><link rel=canonical href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/visualization.html><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+ <body>
+ <table class=title>
+ <tbody><tr>
+ <td style=text-align:left>
+ <h1>Informacje DECOR dla projektu: Polska Implementacja Krajowa HL7 CDA (wersja 1.3.2)
+ (plcda-)
+ </h1>
+ </td>
+ </tr>
+ </table>
+ <ul id=TabbedPanel>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/index.html>Strona główna</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/project.html>Informacje o projekcie</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/scenarios.html>Scenariusze</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/identifiers.html>Identyfikatory</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/valuesets.html>Zbiory wartości</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/dictionaries.html>Słowniki</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/rules.html>Wszystkie szablony</a></li>
+ <li class=TabbedPanelsTabSelected>Wizualizacja</li>
+ </ul>
+ <div xmlns class=TabbedPanelsContent>
+ <div id=Accordionrl class=Accordion tabindex=0>
+ <h2>Wizualizacja dokumentu medycznego Transformatą XSLT</h2>
+ <h3>Informacja</h3>
+ 
+ <p>W tym miejscu prezentowane są przykłady wizualizacji elektronicznych dokumentów medycznych
+ zgodnych z regułami definiowanymi niniejszym dokumentem, których lista w postaci XML
+ znajduje się w zakładce 
+ <b>
+ <i>Szablony dokumentów / Przykłady</i>
+ </b>. 
+ </p>
+ 
+ <p>Każda z wizualizacji generowana jest w wyniku kliknięcia w wybrany, umieszczony poniżej
+ link. Generowanie realizowane jest przy pomocy Transformaty XSLT bezpośrednio z dokumentu
+ elektronicznego w postaci XML. Po wyświetleniu przykładowej wizualizacji należy cofnąć
+ się do tej strony przyciskiem 
+ <b>
+ <i>Wstecz</i>
+ </b> przeglądarki lub klawiszem 
+ <b>
+ <i>Backspace</i>
+ </b>.
+ </p>
+ 
+ <p>Paczkę ZIP z Transformatą XSLT, przykładami XML i schemą XSD można pobrać w tym miejscu:
+ 
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/Transformata_XSLT_CDA_PL_IG_1.3.2.zip>[Pobierz ZIP] </a>.
+ </p>
+ 
+ <h3>Przykłady</h3>
+ <table class=document-templates>
+ <tbody><tr>
+ <td>[1]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.3-1.xml>Recepta na lek OTC</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[2]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.3-2.xml>Recepta na lek recepturowy wystawiona na zlecenie lekarza</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[3]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.3-3.xml>Recepta na pełnopłatny środek spożywczy</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[4]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.4-1.xml>Skierowanie na kardiologię</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[5]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.4-2.xml>Skierowanie na rehabilitację kardiologiczną</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[6]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.4-3.xml>Skierowanie na gastroskopię</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[7]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.4-4.xml>Skierowanie do poradni neurologicznej</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[8]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.4-5.xml>Skierowanie na rehabilitację</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[9]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.4-6.xml>Skierowanie do laboratorium</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[10]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.4-7.xml>Skierowanie na RTG</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[11]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.5-1.xml>Zlecenie jednorazowe na gorset</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[12]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.5-2.xml>Zlecenie jednorazowe na nebulizator</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[13]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.5-3.xml>Zlecenie jednorazowe na szkła optyczne</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[14]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.5-4.xml>Zlecenie powtarzalne na pieluchomajtki anatomiczne</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[15]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.7-1.xml>Recepta farmaceutyczna</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[16]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.8-1.xml>Recepta na import docelowy</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[17]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.9-1.xml>Skierowanie na leczenie uzdrowiskowe</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[18]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.9-2.xml>Skierowanie na rehabilitację uzdrowiskową</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[19]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.10-1.xml>Skierowanie do zakładu opiekuńczego</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[20]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.11-1.xml>Skierowanie na pielęgniarską opiekę długoterminową</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[21]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.12-1.xml>Skierowanie do szpitala psychiatrycznego, wersja rozszerzona</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[22]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.12-2.xml>Skierowanie do szpitala psychiatrycznego, wersja wg aktualnego wzoru</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[23]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.13-1.xml>Skierowanie na badania w związku z podejrzeniem choroby zawodowej</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[24]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.14-1.xml>Dokument anulujący</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[25]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.15-1.xml>Konsultacja lekarska</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[26]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.15-1B-pdf.xml>Konsultacja lekarska (treść dokumentu w formacie PDF)</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[27]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.16-1.xml>Opis badania diagnostycznego</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[28]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.16-1B-png.xml>Opis badania diagnostycznego (treść dokumentu w formacie PNG)</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[29]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.17-1.xml>Sprawozdanie z badania laboratoryjnego (przykład 1)</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[30]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.17-2.xml>Sprawozdanie z badania laboratoryjnego (przykład 2)</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[31]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.17-3.xml>Sprawozdanie z badania laboratoryjnego (przykład 3)</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[32]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.17-3B-jpeg.xml>Sprawozdanie z badania laboratoryjnego (przykład 3, treść w formacie JPEG)</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[33]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.18-1.xml>Karta informacyjna leczenia szpitalnego</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[34]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.19-1.xml>Karta odmowy przyjęcia do szpitala</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[35]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.19-1B-png.xml>Karta odmowy przyjęcia do szpitala (treść dokumentu w formacie PNG)</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[36]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.20-1.xml>Protokół operacyjny</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[37]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.20-1B-jpeg.xml>Protokół operacyjny (treść dokumentu w formacie JPEG)</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[38]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.21-1.xml>Wpis do karty uodpornienia</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[39]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.22-1.xml>Karta wywiadu pielęgniarskiego</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[40]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.23-1.xml>Karta oceny stanu pacjenta</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[41]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.24-1.xml>Zalecenia pielęgniarskie przy wypisie ze szpitala</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[42]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.24-1B-jpeg.xml>Zalecenia pielęgniarskie przy wypisie ze szpitala (treść dokumentu w formacie JPEG)</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[43]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.25-1.xml>Raport pielęgniarski</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[44]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.26-1.xml>Recepta na Rilutek wystawiona przez asystenta medycznego</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[45]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.26-2.xml>Recepta pro auctore, spełniająca wymagania związane z refundacją</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[46]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.26-3.xml>Recepta na Debridat dla niemowlęcia z opiekunem obcokrajowcem, na 365 dni</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[47]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.26-4.xml>Recepta na wyrób medyczny</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[48]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.26-5.xml>Recepta na lek recepturowy</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[49]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.27-1.xml>Realizacja recepty farmaceutycznej</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[50]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.27-2.xml>Realizacja recepty na import docelowy</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[51]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.27-3.xml>Realizacja recepty na lek recepturowy</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[52]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.27-4.xml>Realizacja recepty spełniającej wymagania związane z refundacją</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[53]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.27-5.xml>Realizacja wycofujaca recepty</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[54]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.27-6.xml>Realizacja recepty papierowej pro familia, z kodem uprawnień C, z treścią komunikatu
+ LEK
+ </a>
+ </td>
+ </tr>
+ <tr>
+ <td>[55]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.27-7.xml>Realizacja recepty papierowej dla pacjenta NN</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[56]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.27-8.xml>Wydanie leku OTC bez recepty</a>
+ </td>
+ </tr>
+ <tr>
+ <td>[57]</td>
+ <td>
+ <a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/files/examples/2.16.840.1.113883.3.4424.13.10.1.28-1.xml>Informacja dla lekarza kierującego/POZ</a>
+ </td>
+ </tr>
+ </table>
+ </div>
+ </div>
+ 

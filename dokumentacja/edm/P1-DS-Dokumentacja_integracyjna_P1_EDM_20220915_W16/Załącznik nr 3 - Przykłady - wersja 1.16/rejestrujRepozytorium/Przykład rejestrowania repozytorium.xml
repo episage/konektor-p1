@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://csioz.gov.pl/p1/szar/ws/v1" xmlns:v11="http://csioz.gov.pl/p1/szar/mt/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:RejestrowanieRepozytoriumRequest>
+         <!--Optional:-->
+         <v11:wymusUtworzenieNowegoRepozytorium>true</v11:wymusUtworzenieNowegoRepozytorium>
+      </v1:RejestrowanieRepozytoriumRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

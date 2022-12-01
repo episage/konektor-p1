@@ -1,0 +1,107 @@
+<Coverage xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementOS"/>
+		<security>
+			<system value="@@poziomPoufnosciSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.83}~"/>
+			<code value="@@poziomPoufnosciKod@@~{N}~"/>
+		</security>
+	</meta>
+	<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementEncounterReference">
+		<valueReference>
+			<reference value="Encounter/@@encounterId@@~{XX}~"/>
+			<type value="Encounter"/>			
+		</valueReference>
+	</extension>	
+	<status value="@@coverage_status@@~{active}~"/>
+	<type>
+		<coding>
+			<system value="urn:oid:2.16.840.1.113883.3.4424.11.1.93"/>
+			<code value="U"/>
+			<display value="Ubezpieczony"/>
+		</coding>
+	</type>
+	<beneficiary>
+		<reference value="Patient/@@patientId@@~{XX}~"/>
+		<type value="Patient"/>
+		<identifier>
+			<system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.4.330.56}~"/>
+			<value value="@@identyfikatorPacjenta@@~{AA123456}~"/>
+		</identifier>
+	</beneficiary>
+	<period>
+		<start value="2019-08-26T10:00:00+02:00"/>
+		<end value="2025-08-26T16:00:00+02:00"/>
+	</period>	
+	<payor>
+		<identifier>
+			<system value="@@platnikOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+			<value value="@@platnikIdentyfikator@@~{12300509785}~"/>
+		</identifier>
+	</payor>
+	<class>		
+		<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementDocumentStatementCode">
+			<valueCoding>
+				<system value="https://ezdrowie.gov.pl/fhir/CodeSystem/PLEntitlementDocumentStatementCodeTypeCodeSystem"/>
+				<code value="OUP"/>
+				<display value="Wskazanie podstawy prawa do świadczeń na podstawie objęcia ubezpieczeniem zdrowotnym – oświadczenie złożone przez świadczeniobiorcę"/>			
+			</valueCoding>
+		</extension>
+		<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementDocumentDate">
+			<valueDateTime value="@@coverageData@@~{2019-08-26T10:00:00+02:00}~"/>
+		</extension>
+		<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementDocumentIdentifier">
+			<valueString value="12345678"/>
+		</extension>
+		<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementDocumentValidityPeriod">
+			<valuePeriod>
+				<start value="2019-08-26T10:00:00+02:00"/>
+				<end value="@@dataKoncaUprawnien@@~{2021-12-04T10:00:00+02:00}~"/>
+			</valuePeriod>
+		</extension>
+		<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementDocumentConfirmMethodCode">
+			<valueCoding>
+				<system value="urn:oid:2.16.840.1.113883.3.4424.11.1.119"/>
+				<code value="2"/>
+				<display value="okazanie przez pacjenta dokumentu potwierdzającego tożsamość - wyłącznie przy udzielaniu świadczenia opieki zdrowotnej w formie wideoporady"/>			
+			</valueCoding>
+		</extension>
+		<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementDocumentSubmitMethodCode">
+			<valueCoding>
+				<system value="urn:oid:2.16.840.1.113883.3.4424.11.1.120"/>
+				<code value="2"/>
+				<display value="elektronicznie (na odpowiednim urządzeniu rejestrującym podpis jako grafikę lub w formie wiadomości e-mail)"/>			
+			</valueCoding>
+		</extension>
+		<extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEntitlementDocumentPersonOS">
+			<extension url="Identifier">
+				<valueIdentifier>
+					<system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.4.330.56}~"/>
+					<value value="@@identyfikatorPacjenta@@~{AA123456}~"/>
+				</valueIdentifier>
+			</extension>
+			<extension url="Name">
+				<valueHumanName>
+					<family value="@@nazwisko@@~{Anton}~"/>
+					<given value="@@imie@@~{Charrette}~"/>
+				</valueHumanName>
+			</extension>
+			<extension url="Address">
+				<valueAddress>
+					<line value="Netelaan 179"/>
+					<city value="Brugge"/>
+					<district value="West-Vlaanderen"/>
+					<state value="Vlaams Gewest"/>
+					<postalCode value="3452H"/>
+					<country value="Belgia"/>
+				</valueAddress>
+			</extension>
+		</extension>
+		<type>
+			<coding>
+				<system value="urn:oid:2.16.840.1.113883.3.4424.11.1.92"/>
+				<code value="OSE"/>
+			</coding>
+		</type>
+		<value value="@@classValue@@~{01}~"/>
+	</class>
+</Coverage>

@@ -1,0 +1,65 @@
+<Observation xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="@@profilPregnacy@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLPregnacyHistory}~"/>
+		<security>
+			<system value="@@poziomPoufnosciSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.83}~"/>
+			<code value="@@poziomPoufnosciKod@@~{N}~"/>
+		</security>
+    </meta>
+	<basedOn>
+		<identifier>
+			<system value="@@slownikProgramu@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.141}~"/>
+		</identifier>
+		<display value="@@nazwaProgramu@@~{Program Badań Prenatalnych}~"/>
+   </basedOn>
+    <status value="@@statusWynikuObserwacjiCiazy@@~{final}~"/>
+    <code>
+        <coding>
+            <system value="@@typObserwacjiSlownik@@~{urn:oid:2.16.840.1.113883.6.1}~"/>
+            <code value="@@typObserwacjiKod@@~{82810-3}~"/>
+            <display value="@@typObserwacjiDisplay@@~{Status ciąży}~"/>
+        </coding>
+    </code>
+    <subject>
+		<reference value="Patient/@@patientId@@~{XX}~"/>
+		<type value="Patient"/>
+		<identifier>
+			<system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+			<value value="@@identyfikatorPacjenta@@~{12300509785}~"/>
+		</identifier>
+		<display value="@@imieNazwiskoPacjenta@@~{ANNA KASINA}~" />
+    </subject>
+	<effectiveDateTime value="@@wykonanieObserwacjiData@@~{2020-06-02T10:00:00+01:00}~"/>
+    <performer>
+        <identifier>
+            <system value="@@pracownikOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.6.2}~"/>
+            <value value="@@pracownikIdentyfikator@@~{9438715}~"/>
+        </identifier>
+		<display value="@@pracownikDisplay@@~{Marzena Lttd}~"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system value="@@systemStatusuKodowaniaCiazyOID@@~{urn:oid:2.16.840.1.113883.6.1}~"/>
+            <code value="@@kodStatusuCiazy@@~{LA26683-5}~"/>
+			<display value="@@nazwaStatusuCiazy@@~{Brak ciąży}~"/>
+        </coding>
+    </valueCodeableConcept >
+	<component>
+        <code>
+            <coding>
+                <system value="@@systemCiazyMnogiejOID@@~{urn:oid:2.16.840.1.113883.6.1}~" />
+                <code value="@@kodCiazyMnogiej@@~{45371-2}~" />
+                <display value="@@nazwaStatusuCiazyMnogiej@@~{Ciąża mnoga}~"/>
+            </coding>
+        </code>
+    </component>
+	<component>
+        <code>
+            <coding>
+                <system value="@@systemZakonczeniaCiazyOID@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.140}~" />
+                <code value="@@kodZakonczeniaCiazy@@~{P}~" />
+                <display value="@@nazwaZakonczeniaCiazy@@~{Poród}~"/>
+            </coding>
+        </code>
+    </component>
+</Observation>

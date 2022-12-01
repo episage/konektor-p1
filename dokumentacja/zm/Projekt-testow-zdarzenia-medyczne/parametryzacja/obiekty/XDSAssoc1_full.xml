@@ -1,0 +1,26 @@
+				<!-- Asocjacje SubmissionSet -> DocumentEntry -->
+				<rim:Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember"
+								 id="@@XDSAssociationID1_SSDE@@~{f04988a0-1111-4dff-b660-1f5c78c622c0}~"
+								 sourceObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~"
+								 targetObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~">
+					<rim:Slot name="SubmissionSetStatus">
+						<rim:ValueList>
+							<rim:Value>Original</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+				</rim:Association>
+				<!-- Asocjacje SubmissionSet -> DocumentEntry -->
+				<rim:Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember"
+								 id="@@XDSAssociationID1_SSFD@@~{765d4cd9-d370-4021-9bfa-637f163d155a}~"
+								 sourceObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~"
+								 targetObject="@@FolderUUID1@@~{urn:uuid:8deccf09-d157-555-0001-30d7ea69d37e}~"/>
+				<!-- Asocjacje Folder -> DocumentEntry -->
+				<rim:Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember"
+								 id="@@XDSAssociationID1_FDDE@@~{765d4cd9-d370-3333-0001-637f163d155a}~"
+								 sourceObject="@@FolderUUID1@@~{urn:uuid:8deccf09-d157-555-0001-30d7ea69d37e}~"
+								 targetObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~"/>
+				<!-- Asocjacje SubmissionSet -> [Asocjacja Folder -> DocumentEntry] -->
+				<rim:Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember"
+								 id="@@XDSAssociationID1_SSHM@@~{765d4cd9-d370-0001-9bfa-637f163d155a}~"
+								 sourceObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~"
+								 targetObject="@@XDSAssociationID1_FDDE@@~{765d4cd9-d370-3333-0001-637f163d155a}~"/>

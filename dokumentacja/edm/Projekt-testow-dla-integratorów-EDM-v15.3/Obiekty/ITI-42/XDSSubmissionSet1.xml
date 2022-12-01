@@ -1,0 +1,102 @@
+				<!-- Główny element informacji o wysyłce -->
+				<rim:RegistryPackage id="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~"
+									 lid="@@SubmissionSetLID@@~{urn:uuid:575ae42c-bf5b-4126-9df8-9f4cef3e2222}~"
+									 objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:RegistryPackage"
+									 status="@@SubmissionSetStatus@@~{urn:oasis:names:tc:ebxml-regrep:StatusType:Approved}~">
+					<!-- Data wysłania dokumentu -->
+					<rim:Slot name="submissionTime">
+						<rim:ValueList>
+							<rim:Value>@@CreationTime@@~{20200625100338}~</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<rim:Name>
+						<rim:LocalizedString value="Physical"/>
+					</rim:Name>
+					<rim:Description>
+						<rim:LocalizedString value="Annual physical"/>
+					</rim:Description>
+					<rim:VersionInfo versionName="@@SubmissionSetVersion@@~{1}~"/>					
+					<!-- Pracownik medyczny lub system wykonujący wysyłkę -->
+					<rim:Classification classifiedObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~" 
+										nodeRepresentation="" 
+										classificationScheme="urn:uuid:a7058bb9-b4e4-4307-ba5b-e3f0ab85e12d" 
+										objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" 
+										id="id_11">
+						<!-- Dane osobowe autora -->
+						<rim:Slot name="authorPerson">
+							<rim:ValueList>
+								<rim:Value>@@authorPerson1@@~{22334455^Brzęczek^Szymon^^^Lek. med.^^^&amp;2.16.840.1.113883.3.4424.1.6.2&amp;ISO}~</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<!-- Identyfikator  miejsca udzielania świadczeń -->
+						<rim:Slot name="authorInstitution">
+							<rim:ValueList>
+								<rim:Value>@@authorInstitution1@@~{Szpital Bielański^^^^^&amp;2.16.840.1.113883.3.4424.2.3.3&amp;ISO^^^^000000001027-001}~</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<!-- Role autora -->
+						<rim:Slot name="authorRole">
+							<rim:ValueList>
+								<rim:Value>Chirurg</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<!-- Specjalizacja autora -->
+						<rim:Slot name="authorSpecialty">
+							<rim:ValueList>
+								<rim:Value>Chirurgia onkologiczna</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<!-- Dane kontaktowe autora -->
+						<rim:Slot name="authorTelecommunication">
+							<rim:ValueList>
+								<rim:Value>@@authorTelecommunication1@@~{^EMR^PH^^^^^^^^^693112233}~</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>							
+					</rim:Classification>
+					<!--Charakter wysylki-->
+					<rim:Classification classifiedObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~" nodeRepresentation="@@STATUS_CHARAKTERU_WYSYLKI@@~{REGISTER}~" classificationScheme="urn:uuid:aa543740-bdda-424e-8c96-df4873be8500" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification" id="id_14">
+						<rim:Slot name="codingScheme">
+							<rim:ValueList>
+								<rim:Value>Typ wysyłki</rim:Value>
+							</rim:ValueList>
+						</rim:Slot>
+						<rim:Name>
+							<rim:LocalizedString value="@@OPIS_CHARAKTERU_WYSYLKI@@~{Rejestracja indeksu EDM}~"/>
+						</rim:Name>
+					</rim:Classification>
+					<!-- Identyfikator wysyłki nadawany przez usługodawcę -->
+					<rim:ExternalIdentifier value="@@XDSSubmissionSet_uniqueId@@~{1.2.3.4.5.6^12345678}~" 
+											identificationScheme="urn:uuid:96fdda7c-d067-4183-912e-bf5ee74998a8" 
+											objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" 
+											id="id_13" 
+											registryObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~">
+						<rim:Name>
+							<rim:LocalizedString value="XDSSubmissionSet.uniqueId"/>
+						</rim:Name>
+					</rim:ExternalIdentifier>
+					<!-- Identyfikator źródła wysyłki -->
+					<rim:ExternalIdentifier value="1.3.6.1.4.1.21367.4" 
+											identificationScheme="urn:uuid:554ac39e-e3fe-47fe-b233-965d2a147832" 
+											objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" 
+											id="id_14" 
+											registryObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~">
+						<rim:Name>
+							<rim:LocalizedString value="XDSSubmissionSet.sourceId"/>
+						</rim:Name>
+					</rim:ExternalIdentifier>
+					<!-- Główny identyfikator pacjenta -->
+					<rim:ExternalIdentifier value="@@PatientID@@~{P123456789^^^&amp;1.3.6.1.4.1.21367.13.20.1000&amp;ISO}~" 
+											identificationScheme="urn:uuid:6b5aea1a-874d-4603-a4bc-96a0a7b38446" 
+											objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier" 
+											id="id_15" 
+											registryObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~">
+						<rim:Name>
+							<rim:LocalizedString value="XDSSubmissionSet.patientId"/>
+						</rim:Name>
+					</rim:ExternalIdentifier>
+				</rim:RegistryPackage>
+				<!-- Typ XDSSubmissionSet bieżącego elementu RegistryPackage -->
+				<rim:Classification classifiedObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~" 
+									classificationNode="urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd" 
+									id="ID_1135240834_1" 
+									objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification"/>

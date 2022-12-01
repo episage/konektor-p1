@@ -1,0 +1,19 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+   <soap:Header>
+      <Action xmlns="http://www.w3.org/2005/08/addressing">urn:ihe:extpl:2021:RegisterTaskResponse</Action>
+      <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:b0a908d4-0063-44dd-8305-d79ea1e965ee</MessageID>
+      <To xmlns="http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing/anonymous</To>
+      <RelatesTo xmlns="http://www.w3.org/2005/08/addressing">uuid:02e9c92c-0372-4d6c-9abd-3ceb29495c83</RelatesTo>
+   </soap:Header>
+   <soap:Body>
+      <ns3:RegistryResponse status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success" xmlns:ns6="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:ns5="urn:ihe:iti:xds-b:2007" xmlns:ns4="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:ns3="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:ns2="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0">
+         <ns3:ResponseSlotList>
+            <ns2:Slot name="urn:extpl:SlotName:TaskId">
+               <ns2:ValueList>
+                  <ns2:Value>urn:uuid:481004dd-b83f-49da-b0c1-aa255aad7e9d</ns2:Value>
+               </ns2:ValueList>
+            </ns2:Slot>
+         </ns3:ResponseSlotList>
+      </ns3:RegistryResponse>
+   </soap:Body>
+</soap:Envelope>

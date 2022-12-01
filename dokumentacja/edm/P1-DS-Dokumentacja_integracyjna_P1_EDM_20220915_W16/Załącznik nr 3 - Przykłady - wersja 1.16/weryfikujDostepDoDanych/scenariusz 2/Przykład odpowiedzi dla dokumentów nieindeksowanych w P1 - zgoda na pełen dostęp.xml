@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xacml-saml="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13" xmlns:xacml="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17">
+   <soapenv:Body>
+      <xacml-saml:XACMLAuthzDecisionStatementResponse>
+         <xacml:Response>
+            <xacml:Result>
+               <xacml:Decision>Permit</xacml:Decision>
+            </xacml:Result>
+         </xacml:Response>
+      </xacml-saml:XACMLAuthzDecisionStatementResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,1 @@
+W katalogu ${soapui.home}\lib należy umieścić pliki z tego katalogu.

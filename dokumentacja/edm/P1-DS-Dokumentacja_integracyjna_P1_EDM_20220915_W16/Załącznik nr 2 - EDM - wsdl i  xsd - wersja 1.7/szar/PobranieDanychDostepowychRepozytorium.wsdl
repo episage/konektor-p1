@@ -1,0 +1,69 @@
+<wsdl:definitions
+        name="PobranieDanychDostepowychRepozytorium"
+        targetNamespace="http://csioz.gov.pl/p1/szar/ws/v1"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:ns="http://csioz.gov.pl/p1/szar/ws/v1"
+        xmlns:d="http://csioz.gov.pl/p1/szar/mt/v1">
+    <wsdl:types>
+        <xs:schema
+                targetNamespace="http://csioz.gov.pl/p1/szar/ws/v1"
+                xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                xmlns:ns="http://csioz.gov.pl/p1/szar/ws/v1"
+                xmlns:d="http://csioz.gov.pl/p1/szar/mt/v1">
+            <xs:import namespace="http://csioz.gov.pl/p1/szar/mt/v1" schemaLocation="dane-dostepowe.xsd" />
+
+            <xs:element name="PobranieDanychDostepowychRequest" type="ns:PobranieDanychDostepowychRequest"/>
+            <xs:element name="PobranieDanychDostepowychResponse" type="ns:PobranieDanychDostepowychResponse"/>
+
+            <xs:complexType name="PobranieDanychDostepowychRequest">
+                <xs:sequence>
+                    <xs:element ref="d:identyfikatorRepozytorium" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="PobranieDanychDostepowychResponse">
+                <xs:sequence>
+                    <xs:element name="wynik" type="d:WynikOperacjiMT"/>
+                    <xs:element ref="d:daneDostepowe" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+
+    <wsdl:message name="pobranieDanychDostepowychRequest">
+        <wsdl:part name="pobranieDanychDostepowychRequest" element="ns:PobranieDanychDostepowychRequest" />
+    </wsdl:message>
+    <wsdl:message name="pobranieDanychDostepowychResponse">
+        <wsdl:part name="pobranieDanychDostepowychResponse" element="ns:PobranieDanychDostepowychResponse" />
+    </wsdl:message>
+
+    <wsdl:portType name="PobranieDanychDostepowychRepozytoriumWS">
+        <wsdl:documentation>Interfejs udostępnia operację pobrania danych dostępowych repozytorium.</wsdl:documentation>
+        <wsdl:operation name="pobierzDaneDostepowe">
+            <wsdl:documentation>Operacja umożliwia pobranie z systemu P1 danych dostępowych do repozytorium Elektronicznej Dokumentacji Medycznej.</wsdl:documentation>
+            <wsdl:input name="pobranieDanychDostepowychRequest" message="ns:pobranieDanychDostepowychRequest" />
+            <wsdl:output name="pobranieDanychDostepowychResponse" message="ns:pobranieDanychDostepowychResponse" />
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="PobranieDanychDostepowychRepozytoriumWS" type="ns:PobranieDanychDostepowychRepozytoriumWS">
+        <wsdl:documentation>Interfejs udostępnia operację pobrania danych dostępowych repozytorium.</wsdl:documentation>
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+        <wsdl:operation name="pobierzDaneDostepowe">
+            <soap:operation soapAction="urn:pobierzDaneDostepowe" style="document" />
+            <wsdl:input name="pobranieDanychDostepowychRequest">
+                <soap:body use="literal" />
+            </wsdl:input>
+            <wsdl:output name="pobranieDanychDostepowychResponse">
+                <soap:body use="literal" />
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="PobranieDanychDostepowychRepozytorium">
+        <wsdl:port name="PobranieDanychDostepowychRepozytoriumWS" binding="ns:PobranieDanychDostepowychRepozytoriumWS">
+            <soap:address location="www.exampleLocation.com/Port1" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

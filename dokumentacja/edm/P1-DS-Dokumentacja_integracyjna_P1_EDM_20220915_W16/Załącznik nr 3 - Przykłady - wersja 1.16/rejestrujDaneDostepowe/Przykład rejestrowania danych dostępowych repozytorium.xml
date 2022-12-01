@@ -1,0 +1,23 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:req="http://csioz.gov.pl/p1/szar/ws/v1" xmlns:dd="http://csioz.gov.pl/p1/szar/mt/v1">
+	<soapenv:Header>
+		<wsse:Security mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+			<wsse:BinarySecurityToken   
+               EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" 
+               ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" 
+               wsu:Id="x509certificate">
+			   ...
+			</wsse:BinarySecurityToken>
+			<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+			   ...
+			</ds:Signature>
+		</wsse:Security>	
+	</soapenv:Header>
+	<soapenv:Body>
+		<req:RejestrowanieDanychDostepowychRequest>
+			<dd:daneDostepowe>
+				<dd:identyfikatorRepozytorium>1.19.6.24.109.42.1</dd:identyfikatorRepozytorium>
+				<dd:parametr klucz="urn:csioz:p1:daneDostepowe:adresUslugi" wartosc="https://repozytorium.dokumentacji/xds-iti43"/>
+			</dd:daneDostepowe>
+		</req:RejestrowanieDanychDostepowychRequest>
+	</soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,52 @@
+<Provenance xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="@@profilPodpisuPracownika@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLPractitionerSignature}~"/>
+		<security>
+			<system value="@@poziomPoufnosciSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.83}~"/>
+			<code value="@@poziomPoufnosciKod@@~{N}~"/>
+		</security>
+	</meta>
+	<target>
+		<reference value="Immunization/@@immunizationId@@~{XX}~"/>
+		<type value="Immunization"/>
+	</target>
+	<recorded value="@@podpisData@@~{2019-08-26T16:00:00+02:00}~"/>
+	<agent>
+		<role>
+			<coding>
+				<system value="@@staffSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.85}~"/>
+				<code value="@@staffKod@@~{LEK}~"/>
+			</coding>
+		</role>
+		<who>
+			<identifier>
+				<system value="@@pracownikOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.6.2}~"/>
+				<value value="@@pracownikIdentyfikator@@~{5262172}~"/>
+			</identifier>
+			<display value="@@ImieNazwiskoPM@@~{Adam210 Leczniczy}~"/>
+		</who>
+	</agent>
+	<signature>
+		<type>
+			<system value="@@typPodpisuSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.87}~"/>
+			<code value="@@typPodpisuKod@@~{1.2.840.10065.1.12.1.6}~"/>
+		</type>
+		<when value="@@podpisData@@~{2019-08-26T16:00:00+02:00}~"/>
+		<who>
+			<identifier>
+				<system value="@@pracownikOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.6.2}~"/>
+				<value value="@@pracownikIdentyfikator@@~{2698040}~"/>
+			</identifier>
+			<display value="@@ImieNazwiskoPM@@~{Monika Lecznicza}~"/>
+		</who>
+		<onBehalfOf>
+			<identifier>
+				<system value="@@podmiotOID@@~{urn:oid:2.16.840.1.113883.3.4424.2.3.1}~"/>
+				<value value="@@podmiotIdentyfikator@@~{000000012106}~"/>
+			</identifier>
+		</onBehalfOf>
+		<targetFormat value="application/fhir+json"/>
+		<sigFormat value="application/signature+xml"/>
+		<data value="@@binaryPodpis@@~{UHJ6eWvFgmFkb3d5IHBvZHBpcyBaZGFyemVuaWEgTWVkeWN6bmVnby4=}~"/>
+	</signature>
+</Provenance>

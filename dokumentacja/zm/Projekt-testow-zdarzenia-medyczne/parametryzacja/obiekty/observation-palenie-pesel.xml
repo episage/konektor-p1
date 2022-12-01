@@ -1,0 +1,36 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="@@profilDanePOZ@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLSmokingStatus}~"/>
+		<security>
+			<system value="@@poziomPoufnosciSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.83}~"/>
+			<code value="@@poziomPoufnosciKod@@~{N}~"/>
+		</security>
+	</meta>
+	<status value="@@statusDanePOZ@@~{final}~"/>
+	<code>
+		<coding>
+			<system value="@@danePOZSlownik@@~{urn:oid:2.16.840.1.113883.6.1}~"/>
+			<code value="@@danePOZKod@@~{72166-2}~"/>
+			<display value="@@danePOZDisplay@@~{Tobacco smoking status}~"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/@@patientId@@~{XX}~"/>
+		<type value="Patient"/>
+		<identifier>
+			<system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+			<value value="@@identyfikatorPacjenta@@~{12300509785}~"/>
+		</identifier>
+	</subject>
+	<encounter>
+		<reference value="Encounter/@@encounterId@@~{XX}~"/>
+		<type value="Encounter"/>
+	</encounter>
+	<valueCodeableConcept>
+		<coding>
+			<system value="@@palenieTytoniuSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.73}~"/>
+			<code value="@@palenieTytoniuKod@@~{6}~"/>
+			<display value="@@palenieTytoniuDisplay@@~{Palący codziennie - e-papierosy}~"/>
+		</coding>
+	</valueCodeableConcept>
+</Observation>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://csioz.gov.pl/p1/szar/ws/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:d="http://csioz.gov.pl/p1/szar/mt/v1" xmlns:ns="http://csioz.gov.pl/p1/szar/ws/v1" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsp:Policy wsu:Id="wss_ds_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:InitiatorToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                  <wsp:Policy>
+                    <sp:WssX509V3Token10/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:InitiatorToken>
+            <sp:RecipientToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                  <wsp:Policy>
+                    <sp:WssX509V3Token10/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:RecipientToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256Sha256Rsa15/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:OnlySignEntireHeadersAndBody/>
+          </wsp:Policy>
+        </sp:AsymmetricBinding>
+        <sp:Wss10 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Policy>
+            <sp:MustSupportRefKeyIdentifier/>
+            <sp:MustSupportRefIssuerSerial/>
+          </sp:Policy>
+        </sp:Wss10>
+        <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body/>
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://csioz.gov.pl/p1/szar/ws/v1">
+      <xs:import namespace="http://csioz.gov.pl/p1/szar/mt/v1" schemaLocation="ObslugaRejestrowanieDanychDostepowychWS.xsd"/>
+      <xs:element name="RejestrowanieRepozytoriumRequest" type="ns:RejestrowanieRepozytoriumRequest"/>
+      <xs:element name="RejestrowanieRepozytoriumResponse" type="ns:RejestrowanieRepozytoriumResponse"/>
+      <xs:complexType name="RejestrowanieRepozytoriumRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="d:wymusUtworzenieNowegoRepozytorium"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RejestrowanieRepozytoriumResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="d:identyfikatorRepozytorium"/>
+          <xs:element ref="d:wynik"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="RejestrowanieDanychDostepowychRequest" type="ns:RejestrowanieDanychDostepowychRequest"/>
+      <xs:element name="RejestrowanieDanychDostepowychResponse" type="ns:RejestrowanieDanychDostepowychResponse"/>
+      <xs:complexType name="RejestrowanieDanychDostepowychRequest">
+        <xs:sequence>
+          <xs:element ref="d:daneDostepowe"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="RejestrowanieDanychDostepowychResponse">
+        <xs:sequence>
+          <xs:element ref="d:wynik"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="rejestrowanieDanychDostepowychRequest">
+    <wsdl:part name="rejestrowanieDanychDostepowychRequest" element="ns:RejestrowanieDanychDostepowychRequest"/>
+  </wsdl:message>
+  <wsdl:message name="rejestrowanieDanychDostepowychResponse">
+    <wsdl:part name="rejestrowanieDanychDostepowychResponse" element="ns:RejestrowanieDanychDostepowychResponse"/>
+  </wsdl:message>
+  <wsdl:message name="rejestrowanieRepozytoriumRequest">
+    <wsdl:part name="rejestrowanieRepozytoriumRequest" element="ns:RejestrowanieRepozytoriumRequest"/>
+  </wsdl:message>
+  <wsdl:message name="rejestrowanieRepozytoriumResponse">
+    <wsdl:part name="rejestrowanieRepozytoriumResponse" element="ns:RejestrowanieRepozytoriumResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ObslugaRejestrowanieDanychDostepowychWSPortType">
+    <wsdl:operation name="rejestrujDaneDostepowe">
+      <wsdl:documentation>Operacja umożliwia zarejestrowanie w systemie P1 danych dostępowych do repozytorium Elektronicznej Dokumentacji Medycznej.</wsdl:documentation>
+      <wsdl:input message="ns:rejestrowanieDanychDostepowychRequest" wsp:PolicyURIs="#wss_ds_policy" wsaw:Action="urn:rejestrujDaneDostepowe" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+      <wsdl:output message="ns:rejestrowanieDanychDostepowychResponse" wsaw:Action="http://csioz.gov.pl/p1/szar/ws/v1/RejestrowanieDanychDostepowychRepozytoriumWS/rejestrowanieDanychDostepowychResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="rejestrujRepozytorium">
+      <wsdl:documentation>Operacja umożliwia rejestracje w systemie P1 repozytorium Elektronicznej Dokumentacji Medycznej.</wsdl:documentation>
+      <wsdl:input message="ns:rejestrowanieRepozytoriumRequest" wsp:PolicyURIs="#wss_ds_policy" wsaw:Action="urn:rejestrujRepozytorium" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+      <wsdl:output message="ns:rejestrowanieRepozytoriumResponse" wsaw:Action="http://csioz.gov.pl/p1/szar/ws/v1/RejestrowanieDanychDostepowychRepozytoriumWS/rejestrowanieRepozytoriumResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ObslugaRejestrowanieDanychDostepowychWSSoap11Binding" type="ns:ObslugaRejestrowanieDanychDostepowychWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="rejestrujDaneDostepowe">
+      <soap:operation soapAction="urn:rejestrujDaneDostepowe" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rejestrujRepozytorium">
+      <soap:operation soapAction="urn:rejestrujRepozytorium" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ObslugaRejestrowanieDanychDostepowychWS">
+    <wsdl:port name="ObslugaRejestrowanieDanychDostepowychWSHttpSoap11Endpoint" binding="ns:ObslugaRejestrowanieDanychDostepowychWSSoap11Binding">
+      <soap:address location="http://p1tasus-sus:8280/services/ObslugaRejestrowanieDanychDostepowychWS.ObslugaRejestrowanieDanychDostepowychWSHttpSoap11Endpoint"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

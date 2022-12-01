@@ -1,0 +1,116 @@
+<Immunization xmlns="http://hl7.org/fhir">				
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2020-02-27T11:13:50.697+00:00"/>
+        <source value="#FqZxUen1ZPGJtbMg"/>
+		<profile value="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLImmunizationCurrent"/>
+		<security>
+			<system value="@@poziomPoufnosciSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.83}~"/>
+			<code value="@@poziomPoufnosciKod@@~{N}~"/>
+		</security>
+    </meta>
+	<extension url="@@profilExt@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLMedicalCertificateReference}~">
+		<extension url="paperForm">
+			<valueBoolean value="@@paperFormBoolean@@~{true}~"/>
+		</extension>
+		<extension url="asserter">
+			<valueReference>
+				<identifier>
+					<system value="urn:oid:2.16.840.1.113883.3.4424.1.6.2"/>
+					<value value="@@pracownikIdentyfikator@@~{2698040}~"/>
+				</identifier>
+				<display value="@@pracownikDisplay@@~{Monika Lecznicza}~"/>
+			</valueReference>
+		</extension>
+					<extension url="@@extensionUrl@@~{issued}~">
+			<valueDateTime value="@@dataSzczepienia@@~{2020-11-30}~"/>
+		</extension>
+	</extension>
+	<status value="@@immunizationStatus@@~{not-done}~"/>
+	<statusReason>
+		<coding>
+			<system value="@@slownikBrakuSzczepienia@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.103}~"/>
+			<code value="@@powodBrakuSzczepienia@@~{IMMUNE}~"/>
+			<display value="@@opisBrakuSzczepienia@@~{Odporność}~"/>
+		</coding>
+	</statusReason>
+	<vaccineCode>
+		<coding>
+			<system value="@@slownikSzczepien@@~{urn:oid:1.3.160}~"/>
+			<code value="@@szczepienieKod@@~{05909991445591}~"/>
+		</coding>
+		<text value="@@szczepienieDisplay@@~{Preflucel}~"/>
+	</vaccineCode>
+    <patient>
+		<reference value="Patient/@@patientId@@~{1234}~"/>
+		<type value="Patient" />
+        <identifier>
+            <system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~" />
+            <value value="@@identyfikatorPacjenta@@~{12300509785}~"/>
+        </identifier>
+		<display value="@@imieNazwiskoPacjenta@@~{Sylwester Senior}~" />
+    </patient>
+	<encounter>
+		<reference value="Encounter/@@encounterId@@~{1234}~"/>
+		<type value="Encounter"/>
+	</encounter>
+	<occurrenceDateTime value="@@dataSzczepienia@@~{2020-12-07}~"/>
+	<location>
+		<identifier>
+			<system value="@@miejsceUdzielaniaSwiadczenOID@@~{urn:oid:2.16.840.1.113883.3.4424.2.3.3}~"/>
+			<value value="@@miejsceUdzielaniaSwiadczenIdentyfikator@@~{000000012106-001}~"/>
+		</identifier>
+	</location>
+	<manufacturer>
+		<display value="test"/>
+	</manufacturer>
+    <lotNumber value="AAJN11K"/>
+	<site>	
+		<coding>
+			<system value="@@stronaCialaSystem@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.101}~"/>
+			<code value="@@stronaCialaKod@@~{LA}~"/>
+			<display value="@@stronaCialaOpis@@~{Lewe ramię}~"/>
+		</coding>
+	</site>
+	<route>
+		<coding>
+			<system value="@@drogaPodaniaSystem@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.102}~"/>
+			<code value="@@drogaPodaniaKod@@~{IM}~"/>
+			<display value="@@drogaPodaniaOpis@@~{Iniekcja domięśniowa}~"/>
+		</coding>
+	</route>
+	<doseQuantity>
+			<value value="@@iloscPodanejSzczepionki@@~{0.5}~"/>
+			<system value="@@jednostkaMiarSystem@@~{urn:oid:2.16.840.1.113883.6.8}~"/>
+			<code value="@@jednostkaMiaryKod@@~{ML}~"/>
+	</doseQuantity>
+	<performer>
+		<actor>
+			<identifier>
+				<system value="@@pracownikOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.6.2}~"/>
+			<value value="@@pracownikIdentyfikator@@~{2698040}~"/>
+		</identifier>
+		<display value="@@pracownikImieNazwisko@@~{Monika Lecznicza}~"/>
+		</actor>
+	</performer>
+    <note>
+        <text value="Notes on adminstration of vaccine"/>
+    </note>
+	<fundingSource>
+		<coding>
+			<system value="@@zrodloFinansowaniaSystem@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.105}~"/>
+			<code value="@@zrodloFinansowania@@~{private}~"/>
+		</coding>
+	</fundingSource>
+	<protocolApplied>
+		<targetDisease>
+			<coding>
+				<system value="urn:oid:2.16.840.1.113883.3.4424.11.2.6"/>
+				<code value="@@typProceduryKod@@~{99.557}~"/>
+				<display value="@@typProceduryNazwa@@~{Szczepienie przeciw COVID-19}~"/>
+			</coding>
+		</targetDisease>		  
+	<doseNumberPositiveInt value="@@numerDawki@@~{1}~"/>
+	<seriesDosesPositiveInt value="@@liczbaDawek@@~{2}~"/>												
+    </protocolApplied>
+</Immunization>

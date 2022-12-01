@@ -1,0 +1,24 @@
+<AuditMessage>
+	<EventIdentification EventActionCode="C" EventDateTime="2020-10-21T11:05:08.989Z" EventOutcomeIndicator="8">
+		<EventID csd-code="@@typZdarzenia@@~{110107}~" codeSystemName="DCM" originalText="Import"/>
+		<EventTypeCode csd-code="@@kodTypu@@~{ITI-43}~" codeSystemName="IHE Transactions" originalText="Retrieve Document Set"/>
+	</EventIdentification>
+	<ActiveParticipant UserID="@@userIdSource@@~{http://www.w3.org/2005/08/addressing/anonymous}~" AlternativeUserID="000000786129^^^&amp;2.16.840.1.113883.3.4424.2.3.1&amp;ISO" UserIsRequestor="false" NetworkAccessPointID="10.0.64.225" NetworkAccessPointTypeCode="2">
+		<RoleIDCode csd-code="110153" codeSystemName="DCM" originalText="Source" />
+	</ActiveParticipant>
+	<ActiveParticipant UserID="http://10.0.63.225:8080/services/xds-iti43" AlternativeUserID="2888" UserIsRequestor="false" NetworkAccessPointID="10.0.63.225" NetworkAccessPointTypeCode="@@NetworkAccessPointTypeCode@@~{2}~">
+		<RoleIDCode csd-code="110152" codeSystemName="DCM" originalText="Destination"/>
+	</ActiveParticipant>
+	<ActiveParticipant UserID="P10627052^^^&amp;2.16.840.1.113883.4.330.56&amp;ISO" UserIsRequestor="false"/>
+	<AuditSourceIdentification AuditSourceID="000000192280^^^&amp;2.16.840.1.113883.3.4424.2.3.1&amp;ISO">
+		<AuditSourceTypeCode csd-code="4" codeSystemName="DCM" originalText="Application Server Process or Thread"/>
+	</AuditSourceIdentification>
+	<ParticipantObjectIdentification ParticipantObjectID="2.16.840.1.113883.3.4424.2.7.780^4841307.7694322" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+		<ParticipantObjectIDTypeCode csd-code="9" codeSystemName="RFC-3881" originalText="Report Number"/>
+		<ParticipantObjectDetail type="Repository Unique Id" value="Mi4xNi44NDAuMS4xMTM4ODMuMy40NDI0LjcuMjQuMTcyMQ=="/>
+	</ParticipantObjectIdentification>
+	<ParticipantObjectIdentification ParticipantObjectID="2.16.840.1.113883.3.4424.2.7.780^5481686.8045055" ParticipantObjectTypeCode="2" ParticipantObjectTypeCodeRole="3">
+		<ParticipantObjectIDTypeCode csd-code="9" codeSystemName="RFC-3881" originalText="Report Number"/>
+		<ParticipantObjectDetail type="Repository Unique Id" value="Mi4xNi44NDAuMS4xMTM4ODMuMy40NDI0LjcuMjQuMTcyMQ=="/>
+	</ParticipantObjectIdentification>
+</AuditMessage>

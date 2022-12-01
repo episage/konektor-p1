@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://csioz.gov.pl/p1/szar/ws/v1" xmlns:dd="http://csioz.gov.pl/p1/szar/mt/v1">
+	<soapenv:Body>
+		<ws:PobranieDanychDostepowychResponse>
+			<dd:wynik>
+				<dd:status>SUKCES</dd:status>
+			</dd:wynik>
+			<dd:daneDostepowe>
+				<dd:identyfikatorRepozytorium>1.19.6.24.109.42.1</dd:identyfikatorRepozytorium>
+				<dd:parametr klucz="urn:csioz:p1:daneDostepowe:adresUslugi" wartosc="https://repozytorium.dokumentacji/xds-iti43"/>
+			</dd:daneDostepowe>
+		</ws:PobranieDanychDostepowychResponse>
+	</soapenv:Body>
+</soapenv:Envelope>

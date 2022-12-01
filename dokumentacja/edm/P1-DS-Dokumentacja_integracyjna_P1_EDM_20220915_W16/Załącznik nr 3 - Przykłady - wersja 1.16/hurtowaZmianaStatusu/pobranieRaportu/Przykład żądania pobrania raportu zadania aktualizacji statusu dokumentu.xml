@@ -1,0 +1,14 @@
+<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+    <s:Body>
+        <query:AdhocQueryRequest xmlns:lcm="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:query="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0">
+            <query:ResponseOption returnComposedObjects="true" returnType="LeafClass"/>
+            <rim:AdhocQuery id="urn:extpl:QueryType:GetTask">
+                <rim:Slot name="urn:extpl:SlotName:TaskId">
+                    <rim:ValueList>
+                        <rim:Value>urn:uuid:481004dd-b83f-49da-b0c1-aa255aad7e9f</rim:Value>
+                    </rim:ValueList>
+                </rim:Slot>
+            </rim:AdhocQuery>
+        </query:AdhocQueryRequest>
+    </s:Body>
+</s:Envelope>

@@ -1,0 +1,23 @@
+<Patient xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="@@profilPacjenta@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLPatient}~"/>
+      <security>
+         <system value="urn:oid:2.16.840.1.113883.3.4424.11.1.83"/>
+         <code value="@@poziom_poufnosci@@~{N}~"/>
+      </security>
+   </meta>
+   <identifier>
+      <system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.4.330.56}~"/>
+      <value value="@@identyfikatorPacjenta@@~{AA123456}~"/>
+   </identifier>
+   <name>
+      <family value="@@nazwisko@@~{Anton}~"/>
+      <given value="@@imie@@~{Charrette}~"/>
+   </name>
+   <telecom>
+      <system value="@@daneKontaktowe1Kod@@~{phone}~"/>
+      <value value="@@daneKontaktowe1@@~{+32475556791}~"/>
+   </telecom>
+   <gender value="@@plec@@~{male}~"/>
+   <birthDate value="@@dataUrodzenia@@~{1960-06-30}~"/>
+</Patient>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://csioz.gov.pl/p1/wyjatki/mt/v20180509" xmlns="http://csioz.gov.pl/p1/wyjatki/mt/v20180509" xmlns:w="http://csioz.gov.pl/p1/wyjatki/mt/v20180509" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:simpleType name="KodBleduMinorMT">
+		<xs:annotation>
+			<xs:documentation>Kody błędu - część uzupełniająca</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="urn:csioz:p1:kodBleduMinor:certyfikatNiewazny"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMinor:brakCertyfikatu"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMinor:bladKontekstu"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMinor:brakUprawnienPodmiotu"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMinor:brakUprawnienPracownikaMedycznego"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMinor:bladZapisu"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="KodBleduMajorMT">
+		<xs:annotation>
+			<xs:documentation>Kody błędu - część główna</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="urn:csioz:p1:kodBleduMajor:bladPodpisuKomunikatu"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMajor:kontoZablokowane"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMajor:niepoprawnyKomunikat"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMajor:bladUwierzytelnienia"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMajor:bladAutoryzacji"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMajor:bladWewnetrzny"/>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMajor:bladPodpisuKomunikatuWSS">
+				<xs:annotation>
+					<xs:documentation>nieprawidłowy certyfikat lub naruszona integralność komunikatu na poziomie WS-Security</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMajor:bladUwierzytelnieniaWSS">
+				<xs:annotation>
+					<xs:documentation>błąd uwierzytelnienie na poziomie WS-Security</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="urn:csioz:p1:kodBleduMajor:przekroczonyCzas"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="BladMT">
+		<xs:annotation>
+			<xs:documentation>Błędy techniczne (nie biznesowe).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kodBleduMajor" type="KodBleduMajorMT" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Kod wyniku - część główna</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kodBleduMinor" type="KodBleduMinorMT" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Kod wyniku - część dodatkowa</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="opis" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Tekstowy opis błędu.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,25 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Header/>
+   <soap:Body>
+      <ns7:XACMLAuthzDecisionStatementResponse xmlns:ns7="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13" xmlns:ns8="http://www.w3.org/2001/04/xmlenc#" xmlns:ns6="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:protocol:wd-13" xmlns:ns5="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:ns4="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="urn:oasis:names:tc:SAML:2.0:assertion">
+         <ns5:Response>
+            <ns5:Result>
+               <ns5:Decision>Permit</ns5:Decision>
+               <ns5:Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource">
+                  <ns5:Attribute AttributeId="urn:csioz:p1:autoryzacja:idDokumentu" IncludeInResult="true">
+                     <ns5:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">urn:uuid:20744602-ba65-44e9-87ee-abcdef000002</ns5:AttributeValue>
+                  </ns5:Attribute>
+               </ns5:Attributes>
+            </ns5:Result>
+            <ns5:Result>
+               <ns5:Decision>Permit</ns5:Decision>
+               <ns5:Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource">
+                  <ns5:Attribute AttributeId="urn:csioz:p1:autoryzacja:idDokumentu" IncludeInResult="true">
+                     <ns5:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">urn:uuid:5994c1a2-d167-453f-a826-2cf97d9f9bd4</ns5:AttributeValue>
+                  </ns5:Attribute>
+               </ns5:Attributes>
+            </ns5:Result>
+         </ns5:Response>
+      </ns7:XACMLAuthzDecisionStatementResponse>
+   </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,12 @@
+				<rim:Association targetObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~" sourceObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-4321-1111-2222-14c117944197}~" associationType="urn:ihe:iti:2010:AssociationType:UpdateAvailabilityStatus" id="@@XDSAssociationID1_Status@@~{urn:uuid:f04988a0-1234-8888-b660-1f5c78c622c0}~" objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Association">
+					<rim:Slot name="OriginalStatus">
+						<rim:ValueList>
+							<rim:Value>urn:oasis:names:tc:ebxml-regrep:StatusType:Approved</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+					<rim:Slot name="NewStatus">
+						<rim:ValueList>
+							<rim:Value>urn:oasis:names:tc:ebxml-regrep:StatusType:Deprecated</rim:Value>
+						</rim:ValueList>
+					</rim:Slot>
+				</rim:Association>

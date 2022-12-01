@@ -1,0 +1,36 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xacml-saml="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13" xmlns:xacml="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17">
+	<soapenv:Body>
+		<xacml-saml:XACMLAuthzDecisionStatementResponse>
+			<xacml:Response>
+				<xacml:Result>
+					<xacml:Decision>Permit</xacml:Decision>
+					<xacml:Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource" xml:id="typDokumentow1">
+						<xacml:Attribute AttributeId="urn:csioz:p1:autoryzacja:typDokumentu" IncludeInResult="true">
+							<xacml:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">00.20</xacml:AttributeValue>
+						</xacml:Attribute>
+						<xacml:Attribute AttributeId="urn:csioz:p1:autoryzacja:dataWystawieniaOd" IncludeInResult="true">
+							<xacml:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#date">2017-01-01</xacml:AttributeValue>
+						</xacml:Attribute>
+						<xacml:Attribute AttributeId="urn:csioz:p1:autoryzacja:dataWystawieniaDo" IncludeInResult="true">
+							<xacml:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#date">2017-06-30</xacml:AttributeValue>
+						</xacml:Attribute> 
+					</xacml:Attributes>      
+				</xacml:Result>
+				<xacml:Result>
+					<xacml:Decision>Permit</xacml:Decision>
+					<xacml:Attributes Category="urn:oasis:names:tc:xacml:3.0:attribute-category:resource" xml:id="typDokumentow2">
+						<xacml:Attribute AttributeId="urn:csioz:p1:autoryzacja:typDokumentu" IncludeInResult="true">
+							<xacml:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">00.65</xacml:AttributeValue>
+						</xacml:Attribute>
+						<xacml:Attribute AttributeId="urn:csioz:p1:autoryzacja:dataWystawieniaOd" IncludeInResult="true">
+							<xacml:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#date">2015-01-01</xacml:AttributeValue>
+						</xacml:Attribute>
+						<xacml:Attribute AttributeId="urn:csioz:p1:autoryzacja:dataWystawieniaDo" IncludeInResult="true">
+							<xacml:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#date">2018-03-31</xacml:AttributeValue>
+						</xacml:Attribute> 
+					</xacml:Attributes>       
+				</xacml:Result>
+			</xacml:Response>
+		</xacml-saml:XACMLAuthzDecisionStatementResponse>
+	</soapenv:Body>
+</soapenv:Envelope>

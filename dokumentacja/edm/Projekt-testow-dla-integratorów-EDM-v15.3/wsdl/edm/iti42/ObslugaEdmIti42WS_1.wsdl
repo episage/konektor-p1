@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:ihe:iti:xds-b:2007" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:rs="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ihe="urn:ihe:iti:xds-b:2007" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:lcm="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="wss_ds_assertion_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:InitiatorToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                  <wsp:Policy>
+                    <sp:WssX509V3Token10/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:InitiatorToken>
+            <sp:RecipientToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                  <wsp:Policy>
+                    <sp:WssX509V3Token10/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:RecipientToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256Sha256Rsa15/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:OnlySignEntireHeadersAndBody/>
+          </wsp:Policy>
+        </sp:AsymmetricBinding>
+        <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:IssuedToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <sp:RequestSecurityTokenTemplate>
+                <t:TokenType xmlns:t="http://schemas.xmlsoap.org/ws/2005/02/trust">urn:oasis:names:tc:SAML:2.0:assertion</t:TokenType>
+              </sp:RequestSecurityTokenTemplate>
+            </sp:IssuedToken>
+          </wsp:Policy>
+        </sp:SupportingTokens>
+        <sp:Wss10 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Policy>
+            <sp:MustSupportRefKeyIdentifier/>
+            <sp:MustSupportRefIssuerSerial/>
+          </sp:Policy>
+        </sp:Wss10>
+        <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body/>
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:documentation>IHE XDS.b Document Registry = ITI-42 adaptor = Register Document Set.b</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified">
+      <xsd:import namespace="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" schemaLocation="ObslugaEdmIti42WS.xsd"/>
+      <xsd:import namespace="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0" schemaLocation="ObslugaEdmIti42WS_1_2_3.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="RegisterDocumentSet-b_Message">
+    <wsdl:part name="body" element="lcm:SubmitObjectsRequest"/>
+  </wsdl:message>
+  <wsdl:message name="RegisterDocumentSet-bResponse_Message">
+    <wsdl:part name="body" element="rs:RegistryResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ObslugaEdmIti42WSPortType">
+    <wsdl:operation name="DocumentRegistry_RegisterDocumentSet-b">
+      <wsdl:input message="ihe:RegisterDocumentSet-b_Message" wsp:PolicyURIs="#wss_ds_assertion_policy" wsaw:Action="urn:ihe:iti:2007:RegisterDocumentSet-b" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+      <wsdl:output message="ihe:RegisterDocumentSet-bResponse_Message" wsaw:Action="urn:ihe:iti:2007:RegisterDocumentSet-bResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ObslugaEdmIti42WSSoap12Binding" type="ihe:ObslugaEdmIti42WSPortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="DocumentRegistry_RegisterDocumentSet-b">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ObslugaEdmIti42WS">
+    <wsdl:port name="ObslugaEdmIti42WSHttpSoap12Endpoint" binding="ihe:ObslugaEdmIti42WSSoap12Binding">
+      <soap12:address location="http://p1tasus-sus:8280/services/ObslugaEdmIti42WS.ObslugaEdmIti42WSHttpSoap12Endpoint"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

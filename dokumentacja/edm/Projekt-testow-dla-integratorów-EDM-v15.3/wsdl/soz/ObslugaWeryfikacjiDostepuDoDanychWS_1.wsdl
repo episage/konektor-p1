@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://csioz.gov.pl/p1/aut/ws/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xacml-saml="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13" xmlns:xacml-samlp="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:protocol:wd-13" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://csioz.gov.pl/p1/aut/ws/v1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <wsp:Policy wsu:Id="wss_ds_assertion_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:AsymmetricBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:InitiatorToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                  <wsp:Policy>
+                    <sp:WssX509V3Token10/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:InitiatorToken>
+            <sp:RecipientToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                  <wsp:Policy>
+                    <sp:WssX509V3Token10/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:RecipientToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256Sha256Rsa15/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:OnlySignEntireHeadersAndBody/>
+          </wsp:Policy>
+        </sp:AsymmetricBinding>
+        <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:IssuedToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <sp:RequestSecurityTokenTemplate>
+                <t:TokenType xmlns:t="http://schemas.xmlsoap.org/ws/2005/02/trust">urn:oasis:names:tc:SAML:2.0:assertion</t:TokenType>
+              </sp:RequestSecurityTokenTemplate>
+            </sp:IssuedToken>
+          </wsp:Policy>
+        </sp:SupportingTokens>
+        <sp:Wss10 xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Policy>
+            <sp:MustSupportRefKeyIdentifier/>
+            <sp:MustSupportRefIssuerSerial/>
+          </sp:Policy>
+        </sp:Wss10>
+        <sp:SignedParts xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <sp:Body/>
+        </sp:SignedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13">
+      <xs:include schemaLocation="ObslugaWeryfikacjiDostepuDoDanychWS.xsd"/>
+      <xs:element name="XACMLAuthzDecisionStatementResponse" type="xacml-saml:XACMLAuthzDecisionStatementType"/>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:protocol:wd-13">
+      <xs:include schemaLocation="ObslugaWeryfikacjiDostepuDoDanychWS_1_2_3_4_5_6.xsd"/>
+      <xs:element name="XACMLAuthzDecisionQueryRequest" type="xacml-samlp:XACMLAuthzDecisionQueryType"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="XACMLAuthzDecisionQueryMsg">
+    <wsdl:part name="request" element="xacml-samlp:XACMLAuthzDecisionQueryRequest"/>
+  </wsdl:message>
+  <wsdl:message name="XACMLAuthzDecisionStatementMsg">
+    <wsdl:part name="response" element="xacml-saml:XACMLAuthzDecisionStatementResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ObslugaWeryfikacjiDostepuDoDanychWSPortType">
+    <wsdl:operation name="weryfikujDostepDoDanych">
+      <wsdl:input message="tns:XACMLAuthzDecisionQueryMsg" wsp:PolicyURIs="#wss_ds_assertion_policy" wsaw:Action="urn:weryfikujDostepDoDanych" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+      <wsdl:output message="tns:XACMLAuthzDecisionStatementMsg" wsaw:Action="http://csioz.gov.pl/p1/aut/ws/v1/WeryfikacjaDostepuDoDanychWS/XACMLAuthzDecisionStatementMsg"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ObslugaWeryfikacjiDostepuDoDanychWSSoap11Binding" type="tns:ObslugaWeryfikacjiDostepuDoDanychWSPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="weryfikujDostepDoDanych">
+      <soap:operation soapAction="urn:weryfikujDostepDoDanych" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ObslugaWeryfikacjiDostepuDoDanychWS">
+    <wsdl:port name="ObslugaWeryfikacjiDostepuDoDanychWSHttpSoap11Endpoint" binding="tns:ObslugaWeryfikacjiDostepuDoDanychWSSoap11Binding">
+      <soap:address location="http://p1iasus-sus:8280/services/ObslugaWeryfikacjiDostepuDoDanychWS.ObslugaWeryfikacjiDostepuDoDanychWSHttpSoap11Endpoint"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

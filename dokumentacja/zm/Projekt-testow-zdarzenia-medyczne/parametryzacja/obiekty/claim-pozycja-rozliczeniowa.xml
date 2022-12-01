@@ -1,0 +1,116 @@
+<Claim xmlns="http://hl7.org/fhir">
+	<meta>
+      <profile value="@@profilRozliczenia@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLMedicalEventNationalHealthFundClaim}~"/>
+        <security>
+            <system value="urn:oid:2.16.840.1.113883.3.4424.11.1.83"/>
+            <code value="@@poziom_poufnosci@@~{N}~"/>
+        </security>
+   </meta>
+    <status value="@@statusRozliczenia@@~{active}~"/>
+    <type>
+        <coding>
+			<system value="@@slownikKategoriRozliczen@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.95}~"/>
+			<code value="@@kodKategoriRozliczen@@~{1}~"/>
+        </coding>
+    </type>
+    <use value="@@celDanych@@~{claim}~"/>
+	<patient>
+		<reference value="Patient/@@patientId@@~{XX}~"/>
+		<type value="Patient"/>
+	  <identifier>
+         <system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+		 <value value="@@identyfikatorPacjenta@@~{12300509785}~"/>
+      </identifier>
+	</patient>
+      <billablePeriod>
+        <start value="@@startOkresRozliczeniowy@@~{2020-03-01T00:00:00.000+01:00}~"/>
+        <end value="@@koniecOkresRozliczeniowy@@~{2020-03-31T23:59:59.000+01:00}~"/>
+    </billablePeriod>
+    <created value="@@dataPrzygotowaniaDanych@@~{2020-03-23}~"/>
+    <provider>
+        <identifier>
+			<system value="@@podmiotOID@@~{urn:oid:2.16.840.1.113883.3.4424.2.3.1}~"/>
+			<value value="@@podmiotIdentyfikator@@~{000000012106}~"/>
+		</identifier>
+    </provider>
+    <priority>
+        <coding>
+        	<system value="@@slownikKodowaniaPriorytetow@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.65}~"/>
+            <code value="@@kodPriorytetu@@~{normalny}~"/>
+        </coding>
+    </priority>
+	<diagnosis>
+        <sequence value="@@numerRozpoznania@@~{1}~"/>
+		<diagnosisReference>
+             <reference value = "Condition/@@conditionId@@~{XX}~"/>
+             <type value = "Condition"/>		
+		</diagnosisReference>		
+    </diagnosis>
+	<procedure>
+        <sequence value="@@numerProcedury@@~{1}~"/>
+		<procedureReference>
+             <reference value = "Procedure/@@procedureId@@~{XX}~"/>
+             <type value = "Procedure"/>		
+		</procedureReference>	
+    </procedure>
+    <insurance>
+        <sequence value="@@numerUbezpieczenia@@~{1}~"/>
+        <focal value="@@flagaRozliczenia@@~{true}~"/>
+        <identifier>
+					<system value="@@platnikOID@@~{urn:oid:2.16.840.1.113883.3.4424.3.1}~"/>
+					<value value="@@platnikIdentyfikator@@~{01}~"/>
+				</identifier>
+        <coverage>
+			<reference value="Coverage/@@coverageId@@~{XX}~"/>
+        	<type value="Coverage"/>
+        </coverage>
+        <businessArrangement value="@@numerUmowyNFZ@@~{07-06-02336-20-03/06}~"/>
+    </insurance>
+    <item>
+		<extension xmlns="http://hl7.org/fhir" url="@@wagaPunktowa@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLNationalHealthFundPoints}~">
+             <valueDecimal value = "@@wartoscPuntowa@@~{1.0000}~"/>
+		</extension>
+        <extension xmlns="http://hl7.org/fhir" url="@@specjalneUprawnienia@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLNationalHealthFundSpecialSettlement}~">
+            <valueCode value="@@kodUprawnienia@@~{54A}~"/>
+        </extension>
+		<extension xmlns="http://hl7.org/fhir" url="@@faktycznaIloscSwiadczen@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLNationalHealthFundBillingItemRealQuantity}~">
+            <valueDecimal value="@@wartoscIloscSwiadczen@@~{1.5400}~"/>
+        </extension>
+		<extension xmlns="http://hl7.org/fhir" url="@@trybRatowaniaZycia@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLEmergencyTreatment}~">
+            <valueBoolean value="@@wartoscTrybu@@~{false}~"/>
+        </extension>
+        <sequence value="@@kolejnoscRozliczenia@@~{1}~"/>
+		<diagnosisSequence value="@@numerRozpoznania@@~{1}~" />
+		<procedureSequence value="@@numerProcedury@@~{1}~" />		
+        <category>
+            <coding>
+                <code value="@@kodZakresSwiadczen@@~{01.0010.092.01}~"/>
+            </coding>
+        </category>
+        <productOrService>
+            <coding>
+                <code value="@@kodSwiadczenia@@~{5.01.00.0000075}~"/>
+            </coding>
+        </productOrService>
+        <modifier>
+            <coding>
+                <code value="@@kodWariantuZakresuSw@@~{4}~"/>
+            </coding>
+        </modifier>
+        <servicedPeriod>
+        	 <start value="@@poczatekOkresu@@~{2020-03-12T14:10:01.077+01:00}~"/>
+        	 <end value="@@koniecOkresu@@~{2020-03-12T14:15:31.078+01:00}~"/>
+        </servicedPeriod>
+        <quantity>
+            <value value="@@krotnoscRealizacji@@~{1.0000}~"/>
+        </quantity>
+        <unitPrice>
+            <value value="@@cenaJednRozl@@~{45.53}~"/>
+        </unitPrice>
+        <factor value="@@wartoscTaryfy@@~{1.0000}~"/>
+        <encounter>
+            <reference value="Encounter/@@encounterId@@~{XX}~"/>
+            <type value="Encounter"/>
+        </encounter>
+    </item>
+</Claim>

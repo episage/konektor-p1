@@ -1,0 +1,108 @@
+﻿<wsdl:definitions
+		name="RejestrowanieDanychDostepowychRepozytorium"
+		targetNamespace="http://csioz.gov.pl/p1/szar/ws/v1"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:wsp="http://www.w3.org/ns/ws-policy"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:ns="http://csioz.gov.pl/p1/szar/ws/v1"
+		xmlns:d="http://csioz.gov.pl/p1/szar/mt/v1">
+	<wsdl:import location="../common/policies.wsdl" namespace="http://csioz.gov.pl/p1/wsp/v1"/>
+	<wsdl:types>
+		<xs:schema
+				targetNamespace="http://csioz.gov.pl/p1/szar/ws/v1"
+				xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				xmlns:ns="http://csioz.gov.pl/p1/szar/ws/v1"
+				xmlns:d="http://csioz.gov.pl/p1/szar/mt/v1">
+			<xs:import namespace="http://csioz.gov.pl/p1/szar/mt/v1" schemaLocation="dane-dostepowe.xsd" />
+
+			<xs:element name="RejestrowanieRepozytoriumRequest" type="ns:RejestrowanieRepozytoriumRequest"/>
+			<xs:element name="RejestrowanieRepozytoriumResponse" type="ns:RejestrowanieRepozytoriumResponse"/>
+
+			<xs:complexType name="RejestrowanieRepozytoriumRequest">
+				<xs:sequence>
+					<xs:element ref="d:wymusUtworzenieNowegoRepozytorium" minOccurs="0"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RejestrowanieRepozytoriumResponse">
+				<xs:sequence>
+					<xs:element ref="d:identyfikatorRepozytorium" minOccurs="0"/>
+                    <xs:element ref="d:wynik"/>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="RejestrowanieDanychDostepowychRequest" type="ns:RejestrowanieDanychDostepowychRequest"/>
+			<xs:element name="RejestrowanieDanychDostepowychResponse" type="ns:RejestrowanieDanychDostepowychResponse"/>
+
+			<xs:complexType name="RejestrowanieDanychDostepowychRequest">
+				<xs:sequence>
+					<xs:element ref="d:daneDostepowe"/>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="RejestrowanieDanychDostepowychResponse">
+				<xs:sequence>
+					<xs:element ref="d:wynik"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+	</wsdl:types>
+
+	<wsdl:message name="rejestrowanieRepozytoriumRequest">
+		<wsdl:part name="rejestrowanieRepozytoriumRequest" element="ns:RejestrowanieRepozytoriumRequest" />
+	</wsdl:message>
+	<wsdl:message name="rejestrowanieRepozytoriumResponse">
+		<wsdl:part name="rejestrowanieRepozytoriumResponse" element="ns:RejestrowanieRepozytoriumResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="rejestrowanieDanychDostepowychRequest">
+		<wsdl:part name="rejestrowanieDanychDostepowychRequest" element="ns:RejestrowanieDanychDostepowychRequest" />
+	</wsdl:message>
+	<wsdl:message name="rejestrowanieDanychDostepowychResponse">
+		<wsdl:part name="rejestrowanieDanychDostepowychResponse" element="ns:RejestrowanieDanychDostepowychResponse" />
+	</wsdl:message>
+
+	<wsdl:portType name="RejestrowanieDanychDostepowychRepozytoriumWS">
+		<wsdl:documentation>Interfejs udostępnia operację rejestrowania danych dostępowych repozytorium.</wsdl:documentation>
+		<wsdl:operation name="rejestrujRepozytorium">
+			<wsdl:documentation>Operacja umożliwia rejestracje w systemie P1 repozytorium Elektronicznej Dokumentacji Medycznej.</wsdl:documentation>
+			<wsdl:input name="rejestrowanieRepozytoriumRequest" message="ns:rejestrowanieRepozytoriumRequest" />
+			<wsdl:output name="rejestrowanieRepozytoriumResponse" message="ns:rejestrowanieRepozytoriumResponse" />
+		</wsdl:operation>
+		<wsdl:operation name="rejestrujDaneDostepowe">
+			<wsdl:documentation>Operacja umożliwia zarejestrowanie w systemie P1 danych dostępowych do repozytorium Elektronicznej Dokumentacji Medycznej.</wsdl:documentation>
+			<wsdl:input name="rejestrowanieDanychDostepowychRequest" message="ns:rejestrowanieDanychDostepowychRequest" />
+			<wsdl:output name="rejestrowanieDanychDostepowychResponse" message="ns:rejestrowanieDanychDostepowychResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="RejestrowanieDanychDostepowychRepozytoriumWS" type="ns:RejestrowanieDanychDostepowychRepozytoriumWS">
+		<wsdl:documentation>Interfejs udostępnia operację rejestrowania danych dostępowych repozytorium</wsdl:documentation>
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="rejestrujRepozytorium">
+			<soap:operation soapAction="urn:rejestrujRepozytorium" style="document" />
+			<wsdl:input name="rejestrowanieRepozytoriumRequest">
+				<soap:body use="literal" />
+				<wsp:PolicyReference URI="#wss_ds_policy"/>
+			</wsdl:input>
+			<wsdl:output name="rejestrowanieRepozytoriumResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="rejestrujDaneDostepowe">
+			<soap:operation soapAction="urn:rejestrujDaneDostepowe" style="document" />
+			<wsdl:input name="rejestrowanieDanychDostepowychRequest">
+				<soap:body use="literal" />
+				<wsp:PolicyReference URI="#wss_ds_policy"/>
+			</wsdl:input>
+			<wsdl:output name="rejestrowanieDanychDostepowychResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="RejestrowanieDanychDostepowychRepozytorium">
+		<wsdl:port name="RejestrowanieDanychDostepowychRepozytoriumWS" binding="ns:RejestrowanieDanychDostepowychRepozytoriumWS">
+			<soap:address location="www.exampleLocation.com/Port1" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,14 @@
+Plik zawiera listę zmian dot. konkretnej wersji paczki ze skryptami testowymi EDM dla integratorów. 
+
+# Wersja:
+
+## 15.3:
+- Dodanie zestawu testów: 'Hurtowa zmiana statusu dokumentów', z dwoma przypadkami testowymi:
+	* Zmiana statusu jednego dokumentu
+	* Pobranie informacji o realizacji zdarzenia zmiany statusu
+- Dostosowanie projektu do zapisywania indeksu EDM wraz z powiązanym zdarzeniem medycznym:
+	* Modyfikacja generatora danych (Utils >> Generator). Obejmuje teraz zapis zasobu Encounter w systemie ZM (Zdarzenia Medyczne).
+	* Zestaw narzędziowy Utils został rozbudowany o funkcje używane podczas zapisywania zasobów w systemie ZM.
+	* W folderze Obiekty został dodany nowy katalog ZM-zapis, który zawiera szablony plików do parametryzacji ZM.
+- Dostosowanie w tokenie SAML formatu przekazywanego identyfikatora placówki.
+- Aktualizacja dokumentu opisowego P1-EDM-Konfiguracja_testów_integracyjnych.

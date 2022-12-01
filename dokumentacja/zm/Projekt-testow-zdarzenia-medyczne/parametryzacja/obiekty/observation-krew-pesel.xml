@@ -1,0 +1,40 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="@@profilGrupaKrwi@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLBloodGroup}~"/>
+		<security>
+			<system value="@@poziomPoufnosciSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.83}~"/>
+			<code value="@@poziomPoufnosciKod@@~{N}~"/>
+	  </security>
+	</meta>
+	<status value="@@statusGrupaKrwi@@~{final}~"/>
+	<code>
+		<coding>
+			<system value="@@badanieKrwiSlownik@@~{urn:oid:2.16.840.1.113883.6.1}~"/>
+			<code value="@@badanieKrwiKod@@~{883-9}~"/>
+			<display value="@@badanieKrwiDisplay@@~{ABO group [Type] in Blood}~"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/@@patientId@@~{XX}~"/>
+		<type value="Patient"/>
+		<identifier>
+			<system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+			<value value="@@identyfikatorPacjenta@@~{12300509785}~"/>
+		</identifier>
+	</subject>
+	<effectiveDateTime value="@@grupaKrwiData@@~{2020-06-02T10:00:00+01:00}~"/>
+	<performer>
+		<identifier>
+			<system value="@@pracownikOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.6.2}~"/>
+			<value value="@@pracownikIdentyfikator@@~{9438715}~"/>
+		</identifier>
+		<display value="@@pracownikDisplay@@~{ANNA KASINA}~"/>
+	</performer>
+	<valueCodeableConcept>
+		<coding>
+			<system value="@@grupaKrwiSlownik@@~{urn:oid:2.16.840.1.113883.6.96}~"/>
+			<code value="@@grupaKrwiKod@@~{112144000}~"/>
+			<display value="@@grupaKrwiDisplay@@~{Blood group A (finding)}~"/>
+		</coding>
+	</valueCodeableConcept>
+</Observation>

@@ -1,0 +1,1 @@
+Katalog na certyfikaty

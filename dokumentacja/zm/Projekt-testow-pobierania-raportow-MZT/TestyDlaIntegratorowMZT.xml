@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="b8f8ece7-0737-4943-b597-402f6d77255f" activeEnvironment="Default" name="TestyDlaIntegratorowMZT" resourceRoot="${projectDir}" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="9bbd6ae9-570e-4617-a7f9-75d8250cf848" wadlVersion="http://wadl.dev.java.net/2009/02" name="TestyDlaIntegratorowMZT" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    
+    <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
+      <con:endpoint>${#Project#sus.url.address}</con:endpoint>
+    </con:endpoints>
+    
+    <con:resource name="token" path="/token" id="3c69fc47-76f9-43de-a83d-3eeebc67b957">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="false" disableUrlEncoding="false"><con:name>client_assertion_type</con:name><con:value/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="false" disableUrlEncoding="false"><con:name>grant_type</con:name><con:value/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="false" disableUrlEncoding="false"><con:name>client_assertion</con:name><con:value/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter>
+          <con:name>scope</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+        
+        
+        
+      </con:parameters>
+      <con:method name="uwierzytelnijSystemZewnetrznyOrazPracownikaMedycznego" id="07d0f4a6-ee3d-4049-b5f6-f1ce6b9ad58f" method="POST">
+        <con:settings/>
+        <con:parameters><con:parameter required="false" disableUrlEncoding="false"><con:name>client_assertion_type</con:name><con:value/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="false" disableUrlEncoding="false"><con:name>grant_type</con:name><con:value/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter required="false" disableUrlEncoding="false"><con:name>client_assertion</con:name><con:value/><con:style>QUERY</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>scope</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters>
+        <con:representation type="FAULT"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>500 422</con:status><con:params/><con:element xmlns:tok="http://10.17.63.31/token">tok:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:tok="http://10.17.63.31/token">tok:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="54ee0cce-75fd-4a97-b477-22a8c8527bd3" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>${#Project#ServiceAddress}</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+  <con:entry key="grant_type" value=""/>
+  <con:entry key="scope" value=""/>
+  <con:entry key="client_assertion" value=""/>
+</con:parameters>
+          <con:parameterOrder><con:entry>client_assertion</con:entry><con:entry>grant_type</con:entry><con:entry>client_assertion_type</con:entry><con:entry>scope</con:entry></con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="raporty dla klientów zewnętrznych" path="/ext/mzt/raporty/{serviceId}/{idRaportu}" id="54a59c8b-1f53-4aa4-bfec-dce6177db6f5">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>Kontekst-uuidZdarzeniaInicjujacego</con:name>
+          <con:value/>
+          <con:style>HEADER</con:style>
+          <con:default/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>serviceId</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>idRaportu</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+        </con:parameter>
+        <con:parameter>
+          <con:name>Authorization</con:name>
+          <con:value>${#Project#tokenDostepowy}</con:value>
+          <con:style>HEADER</con:style>
+          <con:default>${#Project#tokenDostepowy}</con:default>
+        </con:parameter>
+        <con:parameter>
+          <con:name>podmiot</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="raporty dla klientów zewnętrznych" id="6314903b-0302-4b31-8763-31da03e671ca" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>placowka</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>400 403 500 401 405 404</con:status>
+          <con:params/>
+          <con:element xmlns:tok="http://10.17.63.31/token">tok:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:poz="http://10.0.35.10/raport-ext/poz">poz:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>405</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/octet-stream; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:pay="http://ws.apache.org/commons/ns/payload">pay:binary</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/octet-stream</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>405</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>405</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/octet-stream; charset=UTF-8</con:mediaType>
+          <con:status>405</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/octet-stream</con:mediaType>
+          <con:status>406</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="6a3ce7fb-29f0-4367-a270-bea48dc89314" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>${#Project#ServiceAddress}</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://10.0.35.10/raport-ext/poz</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="idRaportu" value=""/>
+            <con:entry key="Authorization" value=""/>
+            <con:entry key="Kontekst-uuidZdarzeniaInicjujacego" value=""/>
+            <con:entry key="serviceId" value=""/>
+            <con:entry key="placowka" value=""/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>Kontekst-uuidZdarzeniaInicjujacego</con:entry>
+            <con:entry>serviceId</con:entry>
+            <con:entry>idRaportu</con:entry>
+            <con:entry>placowka</con:entry>
+            <con:entry>Authorization</con:entry>
+            <con:entry>podmiot</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  
+  
+  <con:testSuite id="7e6b74f8-f45f-4e45-aba7-4005a905705e" name="Generowanie tokena dostępowego" disabled="true"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="38a36c8b-7619-4227-8582-1e9079b875af" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Generowanie tokena dostępowego" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Wygeneruj token uwierzytelniający" id="3eaa4e14-be8f-44cd-8928-0a9d5bcde51d">
+        <con:settings/>
+        <con:config><script>import io.jsonwebtoken.Claims;
+import java.security.PrivateKey;
+import java.util.HashMap;
+import java.util.Map;
+import pl.gov.csioz.p1.sgz.commons.jwt.serwisy.GenerowanieTokenaJwtService;
+import pl.gov.csioz.p1.sgz.commons.jwt.serwisy.PobranieKluczyService;
+
+def projectDir = context.expand( '${projectDir}')
+def String alias = context.expand('${#Project#aliasCertyfikatu}')
+def String haslo = context.expand('${#Project#hasloCertyfikatu}')
+def String plik = context.expand('${#Project#plikCertyfikatu}')
+def String sciezkaDoCertyfikatu = projectDir+"/keys/"+ plik
+def String oidPodmiotu = context.expand('${#Project#idPodmiotuOidRoot}:${#Project#idPodmiotuOidExt}')
+def String aud = context.expand('${#Project#aud}')
+def String jti = context.expand('${#Project#jti}')
+def String exp = context.expand('${#Project#exp}')
+def String user_id = context.expand('${#Project#idPracownikaOidRoot}:${#Project#idPracownikaOidExt}')
+def String user_role = context.expand('${#Project#rolaPracownika}')
+def String kodKomorki = context.expand('${#Project#idMiejscaPracyOidExt}')
+
+// utworzenie zmiennej claims, która jest mapą
+Map&lt;String, String> claims = new HashMap&lt;>();
+
+//przypisanie do mapy, klucza i wartości
+claims.put("iss", oidPodmiotu);
+claims.put("sub", oidPodmiotu);
+claims.put("aud", aud);
+claims.put("jti", jti);
+claims.put("exp", exp);
+claims.put("user_id", user_id);
+claims.put("user_role", user_role);
+claims.put("kodKomorki", kodKomorki);
+
+// utworzenie obiektu klasy PobranieKluczyService - wymagany w tworzeniu GenerowanieTokenaJwtService
+PobranieKluczyService pobranieKluczyService = new PobranieKluczyService();
+
+// utworzenie obiektu klasy GenerowanieTokenaJwtService -
+GenerowanieTokenaJwtService generator = new GenerowanieTokenaJwtService(pobranieKluczyService );
+
+// wywolanie metody stworzTokenJwt na obiekcie generator. Tu przekazujemy zmienne, które mają wartości ustawione w poprzednich liniach tego skryptu
+// przypisanie tokenu do zmiennej lokalnej tokenJwt
+def String tokenJwt = generator.stworzTokenJwt(alias, haslo, sciezkaDoCertyfikatu, claims) 
+
+testRunner.testCase.setPropertyValue("tokenUwierzytelniajacy", tokenJwt)
+log.info tokenJwt</script></con:config>
+      </con:testStep><con:testStep type="restrequest" name="Wygeneruj token dostępowy" id="a5e9488c-846e-4392-9c25-a08d07dc3170">
+        <con:settings/>
+        <con:config service="TestyDlaIntegratorowMZT" resourcePath="/token" methodName="uwierzytelnijSystemZewnetrznyOrazPracownikaMedycznego" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Wygeneruj token dostępowy" id="fcc14d47-8311-4a46-8a34-7d51e94d0af4" mediaType="application/x-www-form-urlencoded" postQueryString="true">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>${#Project#ServiceAddress}</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://192.168.99.100/token//token</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="9e13500f-0cf3-4210-9326-67d728a5f57b" name="status 200">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+  <con:entry key="client_assertion_type" value="${#Project#assertionTypeParam}"/>
+  <con:entry key="grant_type" value="${#Project#grantTypeParam}"/>
+  <con:entry key="scope" value="${#Project#scopeParam}"/>
+  <con:entry key="client_assertion" value="${#TestCase#tokenUwierzytelniajacy}"/>
+</con:parameters>
+            <con:parameterOrder><con:entry>grant_type</con:entry><con:entry>client_assertion</con:entry><con:entry>scope</con:entry><con:entry>client_assertion_type</con:entry></con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep><con:testStep type="transfer" name="Zapisz token dostępowy" id="5ca2e0d7-b75e-4eb0-aaaf-ad1ba7873bec">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>accessToken</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>Wygeneruj token dostępowy</con:sourceStep>
+            <con:sourcePath>$.accessToken</con:sourcePath>
+            <con:targetType>tokenDostepowy</con:targetType>
+            <con:targetStep>#TestCase#</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:targetTransferType>JSONPATH</con:targetTransferType>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep><con:properties><con:property><con:name>tokenUwierzytelniajacy</con:name><con:value>eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMi4zLjE6MDAwMDAwMDEyMTA2IiwiYXVkIjoiaHR0cHM6Ly9lemRyb3dpZS5nb3YucGwvdG9rZW4iLCJ1c2VyX3JvbGUiOiJMRUsiLCJ1c2VyX2lkIjoiMi4xNi44NDAuMS4xMTM4ODMuMy40NDI0LjEuNi4yOjI2OTgwNDAiLCJpc3MiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMi4zLjE6MDAwMDAwMDEyMTA2IiwiZXhwIjoiMTY4NzM0MDczNyIsImp0aSI6ImFlNTIxYTUxLTcxMTctNDRjNi04OTViLTc1YmE0Y2JhYWMxNSIsImtvZEtvbW9ya2kiOiIwMDEifQ.2BKeqePBbnMOxt1mMR0s6tOvbnee1pP26kMIBd3yXVFZkx-9Wsr3e6YwPXbYcC8RS13B5BQ8yPgRkDpONpptQtaYgNI0Smub1vyzGQD5D_JEDSRy7DWbwkoRXF3hFL0kSlDLHCrPFzCxG6cuamuNHGRjKGvHE5LLvo1BoM2GAWbp0MdH6px0WtKz2vCDV1IpQeggCr_aSa_iNRs12q7fgBxCDWyoh4zWzh89_pu6-FJLtn-4BG-nPsEfRZeNmgXI6LdwVIUde2zWz7uYQxQSNcPQaGXT8UsGlKeFcATyZBWQsPNXssjuRTBzg1c6sxmg5h48lGke1WTMRtVlWO2RYA</con:value></con:property><con:property><con:name>tokenDostepowy</con:name><con:value>eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMi4zLjE6MDAwMDAwMDEyMTA2IiwiYXVkIjoiaHR0cHM6Ly9lemRyb3dpZS5nb3YucGwvZmhpciIsInVzZXJfcm9sZSI6IkxFSyIsInVzZXJfaWQiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMS42LjI6MjY5ODA0MCIsImlzcyI6Imh0dHBzOi8vZXpkcm93aWUuZ292LnBsIiwiZXhwIjoxNjU1ODEzMjg5LCJpYXQiOjE2NTU4MDMyODksInN1Yl9yb2xlIjpbIlNZU1RFTV9aRVdORVRSWk5ZX1BPRE1JT1RVX0xFQ1pOSUNaRUdPIl0sImp0aSI6IjQwMDFiNTc5LTBjYzgtNDYwMC04N2MzLTRmNDBlM2Q0YjQwMiJ9.e-eA_NU2bMAYBFBKGMyGY6jctj2TO0VuwaUT5U6yhtvnIGNOKmO-cuFEWt4sFJpdyzQlBHCYVFHcs6ZOp6L9dYK2n2nywylJlNqaVmhB4QuR7USBIdWEOFBzbfbtX-sOEslfWFAsNCqlvyC5YxXfbJktGMFQrsSYGikOB_RF3kD1PJJ2H66aKLeZVAV-rhHXdDgdT6aw54sHr8C_jWJbzO8N8V4YVzKzNl9leYolqsaajZ60DYpQJF4OKYg4hEhHc3i6IUjef84224gyEaK5Q-zHbxJSI7nTkGuVLU6B9-dClb7h-HUl8ZVz2TNB6Q-ZbP8wja8oBnjxUoP_ETGgLA</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite>
+  <con:testSuite id="540a794a-5999-4e26-8bba-701facd0afba" name="TestyDlaIntegratorowMZT">
+    <con:description/>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    
+    
+    
+    <con:testCase id="b14b68b6-5058-4d85-b100-0c97a402265b" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Pobranie raportu COVID" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+      <con:settings/>
+      
+      <con:testStep type="groovy" name="Generowanie UUID" id="e4cd6471-2803-4c28-a68a-41188f418ad7"><con:settings/><con:config><script>def uuid = UUID.randomUUID().toString()
+testRunner.testCase.testSuite.project.setPropertyValue("uuid",uuid)</script></con:config></con:testStep>
+      
+      <con:testStep type="calltestcase" name="Generowanie tokena dostępowego" id="2cce7fa6-3fb4-4f4a-b47a-e86a21eece61"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>38a36c8b-7619-4227-8582-1e9079b875af</con:targetTestCase><con:properties><con:property><con:name>tokenUwierzytelniajacy</con:name><con:value>eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMi4zLjE6MDAwMDAwMDEyMTA2IiwiYXVkIjoiaHR0cHM6Ly9lemRyb3dpZS5nb3YucGwvdG9rZW4iLCJ1c2VyX3JvbGUiOiJMRUsiLCJ1c2VyX2lkIjoiMi4xNi44NDAuMS4xMTM4ODMuMy40NDI0LjEuNi4yOjI2OTgwNDAiLCJpc3MiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMi4zLjE6MDAwMDAwMDEyMTA2IiwiZXhwIjoiMTY4NzM0MDczNyIsImp0aSI6ImFlNTIxYTUxLTcxMTctNDRjNi04OTViLTc1YmE0Y2JhYWMxNSIsImtvZEtvbW9ya2kiOiIwMDEifQ.2BKeqePBbnMOxt1mMR0s6tOvbnee1pP26kMIBd3yXVFZkx-9Wsr3e6YwPXbYcC8RS13B5BQ8yPgRkDpONpptQtaYgNI0Smub1vyzGQD5D_JEDSRy7DWbwkoRXF3hFL0kSlDLHCrPFzCxG6cuamuNHGRjKGvHE5LLvo1BoM2GAWbp0MdH6px0WtKz2vCDV1IpQeggCr_aSa_iNRs12q7fgBxCDWyoh4zWzh89_pu6-FJLtn-4BG-nPsEfRZeNmgXI6LdwVIUde2zWz7uYQxQSNcPQaGXT8UsGlKeFcATyZBWQsPNXssjuRTBzg1c6sxmg5h48lGke1WTMRtVlWO2RYA</con:value></con:property><con:property><con:name>tokenDostepowy</con:name><con:value>eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMi4zLjE6MDAwMDAwMDEyMTA2IiwiYXVkIjoiaHR0cHM6Ly9lemRyb3dpZS5nb3YucGwvZmhpciIsInVzZXJfcm9sZSI6IkxFSyIsInVzZXJfaWQiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMS42LjI6MjY5ODA0MCIsImlzcyI6Imh0dHBzOi8vZXpkcm93aWUuZ292LnBsIiwiZXhwIjoxNjU1ODEzMjg4LCJpYXQiOjE2NTU4MDMyODgsInN1Yl9yb2xlIjpbIlNZU1RFTV9aRVdORVRSWk5ZX1BPRE1JT1RVX0xFQ1pOSUNaRUdPIl0sImp0aSI6Ijc0ZTczOGM4LWI3NGEtNDIyMC04ZjI2LWEwMjYyOTc4ZWY0NyJ9.E7lzCs0wL0hPJGo6315PQOmtLOLP51KMjdM0dlzhwIrytPjCZEiF3YCYqYrKfQ0I0EqkJ-sa5cu5CKUmjMhVh8JCqiNk0tyvwyOFNVVsSXcsRR5m7o3-_gxPEjDRJYaVI46jyYFJZ-ORKtF0eps1H02vIAdWbzR-wT0jKYQapI0jVM35RUUOAhLaf2hLEgv8DFxMs4-UBBH1KXp2_ImZGGKhsW4GhPYBD_ql-uSRx_JDyiXvWJK1rg1w5D50wlNAQWGN0tgX4SFnseCDyrBMxoe6kDPZ0ePVe-DzZmQeYGHLl67Wzh8kF86LbBW7NbwERhcA_0__hjYPoBjISnp8tA</con:value></con:property></con:properties><con:returnProperties><con:entry>tokenUwierzytelniajacy</con:entry><con:entry>tokenDostepowy</con:entry></con:returnProperties><con:runMode>SINGLETON_AND_WAIT</con:runMode></con:config></con:testStep>
+      
+      
+      
+      
+      
+      <con:testStep type="restrequest" name="Pobranie raportu dla COVID" id="95a56367-c1a2-4f6f-a0b9-01bbed04be91">
+        <con:settings/>
+        <con:config service="TestyDlaIntegratorowMZT" resourcePath="/ext/mzt/raporty/{serviceId}/{idRaportu}" methodName="raporty dla klientów zewnętrznych" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Pobranie raportu dla COVID" id="6a3ce7fb-29f0-4367-a270-bea48dc89314" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#ServiceAddress}</con:endpoint>
+            <con:request>{
+	"Records": [
+		{
+			"Data": {
+				"KontekstUid": "e4d0b2d4-ec86-4a2b-a7de-50aa540b8203",
+				"Kanal": "IKP",
+				"Uzytkownik": {
+					"Root": "SAZOID",
+					"Ext": "ext"
+				},
+				"Filtr": {
+					"Osoba": {
+						"Root": "2.16.840.1.113883.3.4424.1.1.616",
+						"Ext": "99930000171"
+					}
+				},
+				"Sekcje": {
+					"Osoba.Id": {
+						"Zakres": "S"
+					},
+					"Osoba.DanePodstawowe": {
+						"Zakres": "S"
+					},
+					"Osoba.POZ.Deklaracje.Lekarskie": {
+						"Zakres": "S"
+					},
+					"Osoba.Covid19.Testy": {
+						"Zakres": "S"
+					},
+					"Osoba.Covid19.Kwarantanny": {
+						"Zakres": "S"
+					}
+				}
+			}
+		}
+	]
+}</con:request>
+            <con:originalUri>http://10.0.35.10/raport-ext/poz</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d3513e81-85ee-422a-b812-58a8176fecd5" name="Status 200">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            
+            <con:assertion type="Simple Contains" id="1bb02192-079c-4ad3-ae35-70cfd68b182b" name="Posiada wszystkie nagłówki wymagane dla raportu COVID"><con:configuration><token>pacjent_id;pacjent_pesel;pacjent_imie;pacjent_nazwisko;pacjent_paszport;pacjent_dowod_os;pacjent_npwz;pacjent_zawod_medyczny;dekl_id;dekl_podmiot;dekl_placowka;dekl_kanal;dekl_data_wystawienia;dekl_status;dekl_liczba_wszystkich;test_id;test_wynik;test_data_zlecenia;test_data_pobrania;test_data_wyniku;test_status_zlecenia;test_liczba_wszystkich;kw_id;kw_typ;kw_data_rozpoczecia;kw_data_zakonczenia;kw_liczba_wszystkich</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+  <con:entry key="Authorization" value="Bearer ${Generowanie tokena dostępowego#tokenDostepowy}"/>
+  <con:entry key="idRaportu" value="${#Project#idRaportu1}"/>
+  <con:entry key="Kontekst-uuidZdarzeniaInicjujacego" value="${#Project#uuid}"/>
+  <con:entry key="serviceId" value="${#Project#serviceId}"/>
+  <con:entry key="placowka" value="${#Project#idMiejscaPracyOidRoot}:${#Project#idMiejscaPracyOidExt}"/>
+  <con:entry key="podmiot" value="${#Project#idPodmiotuOidRoot}:${#Project#idPodmiotuOidExt}"/>
+</con:parameters>
+            <con:parameterOrder>
+              <con:entry>Kontekst-uuidZdarzeniaInicjujacego</con:entry>
+              <con:entry>serviceId</con:entry>
+              <con:entry>idRaportu</con:entry>
+              <con:entry>placowka</con:entry>
+              <con:entry>Authorization</con:entry>
+              <con:entry>podmiot</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep><con:properties>
+        
+        
+        
+        
+        
+        
+      </con:properties>
+    </con:testCase>
+    
+    
+    
+    <con:testCase id="81608200-97e9-4cbe-9fba-d9f20d1678a9" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Pobranie raportu PACPOZ" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+      <con:settings/>
+      
+      <con:testStep type="groovy" name="Generowanie UUID" id="b0caf1a1-a904-4a4d-ab6f-a72d15b69b80"><con:settings/><con:config><script>def uuid = UUID.randomUUID().toString()
+testRunner.testCase.testSuite.project.setPropertyValue("uuid",uuid)</script></con:config></con:testStep>
+      
+      <con:testStep type="calltestcase" name="Generowanie tokena dostępowego" id="6c2e1079-80a7-4d46-95bc-ec1d461c8843"><con:settings/><con:config xsi:type="con:RunTestCaseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:targetTestCase>38a36c8b-7619-4227-8582-1e9079b875af</con:targetTestCase><con:properties><con:property><con:name>tokenUwierzytelniajacy</con:name><con:value>eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMi4zLjE6MDAwMDAwMDEyMTA2IiwiYXVkIjoiaHR0cHM6Ly9lemRyb3dpZS5nb3YucGwvdG9rZW4iLCJ1c2VyX3JvbGUiOiJMRUsiLCJ1c2VyX2lkIjoiMi4xNi44NDAuMS4xMTM4ODMuMy40NDI0LjEuNi4yOjI2OTgwNDAiLCJpc3MiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMi4zLjE6MDAwMDAwMDEyMTA2IiwiZXhwIjoiMTY4NzM0MDczNyIsImp0aSI6ImFlNTIxYTUxLTcxMTctNDRjNi04OTViLTc1YmE0Y2JhYWMxNSIsImtvZEtvbW9ya2kiOiIwMDEifQ.2BKeqePBbnMOxt1mMR0s6tOvbnee1pP26kMIBd3yXVFZkx-9Wsr3e6YwPXbYcC8RS13B5BQ8yPgRkDpONpptQtaYgNI0Smub1vyzGQD5D_JEDSRy7DWbwkoRXF3hFL0kSlDLHCrPFzCxG6cuamuNHGRjKGvHE5LLvo1BoM2GAWbp0MdH6px0WtKz2vCDV1IpQeggCr_aSa_iNRs12q7fgBxCDWyoh4zWzh89_pu6-FJLtn-4BG-nPsEfRZeNmgXI6LdwVIUde2zWz7uYQxQSNcPQaGXT8UsGlKeFcATyZBWQsPNXssjuRTBzg1c6sxmg5h48lGke1WTMRtVlWO2RYA</con:value></con:property><con:property><con:name>tokenDostepowy</con:name><con:value>eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMi4zLjE6MDAwMDAwMDEyMTA2IiwiYXVkIjoiaHR0cHM6Ly9lemRyb3dpZS5nb3YucGwvZmhpciIsInVzZXJfcm9sZSI6IkxFSyIsInVzZXJfaWQiOiIyLjE2Ljg0MC4xLjExMzg4My4zLjQ0MjQuMS42LjI6MjY5ODA0MCIsImlzcyI6Imh0dHBzOi8vZXpkcm93aWUuZ292LnBsIiwiZXhwIjoxNjU1ODEzMjg5LCJpYXQiOjE2NTU4MDMyODksInN1Yl9yb2xlIjpbIlNZU1RFTV9aRVdORVRSWk5ZX1BPRE1JT1RVX0xFQ1pOSUNaRUdPIl0sImp0aSI6IjQwMDFiNTc5LTBjYzgtNDYwMC04N2MzLTRmNDBlM2Q0YjQwMiJ9.e-eA_NU2bMAYBFBKGMyGY6jctj2TO0VuwaUT5U6yhtvnIGNOKmO-cuFEWt4sFJpdyzQlBHCYVFHcs6ZOp6L9dYK2n2nywylJlNqaVmhB4QuR7USBIdWEOFBzbfbtX-sOEslfWFAsNCqlvyC5YxXfbJktGMFQrsSYGikOB_RF3kD1PJJ2H66aKLeZVAV-rhHXdDgdT6aw54sHr8C_jWJbzO8N8V4YVzKzNl9leYolqsaajZ60DYpQJF4OKYg4hEhHc3i6IUjef84224gyEaK5Q-zHbxJSI7nTkGuVLU6B9-dClb7h-HUl8ZVz2TNB6Q-ZbP8wja8oBnjxUoP_ETGgLA</con:value></con:property></con:properties><con:returnProperties><con:entry>tokenUwierzytelniajacy</con:entry><con:entry>tokenDostepowy</con:entry></con:returnProperties><con:runMode>SINGLETON_AND_WAIT</con:runMode></con:config></con:testStep>
+      
+      
+      
+      
+      
+      <con:testStep type="restrequest" name="Pobranie raportu dla PACPOZ" id="c6226cab-f5d5-470e-bc8f-2184961d0ea6">
+        <con:settings/>
+        <con:config service="TestyDlaIntegratorowMZT" resourcePath="/ext/mzt/raporty/{serviceId}/{idRaportu}" methodName="raporty dla klientów zewnętrznych" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Pobranie raportu dla PACPOZ" id="6a3ce7fb-29f0-4367-a270-bea48dc89314" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding><con:endpoint>${#Project#ServiceAddress}</con:endpoint>
+            <con:request>{
+	"Records": [
+		{
+			"Data": {
+				"KontekstUid": "e4d0b2d4-ec86-4a2b-a7de-50aa540b8203",
+				"Kanal": "IKP",
+				"Uzytkownik": {
+					"Root": "SAZOID",
+					"Ext": "ext"
+				},
+				"Filtr": {
+					"Osoba": {
+						"Root": "2.16.840.1.113883.3.4424.1.1.616",
+						"Ext": "99930000171"
+					}
+				},
+				"Sekcje": {
+					"Osoba.Id": {
+						"Zakres": "S"
+					},
+					"Osoba.DanePodstawowe": {
+						"Zakres": "S"
+					},
+					"Osoba.POZ.Deklaracje.Lekarskie": {
+						"Zakres": "S"
+					},
+					"Osoba.Covid19.Testy": {
+						"Zakres": "S"
+					},
+					"Osoba.Covid19.Kwarantanny": {
+						"Zakres": "S"
+					}
+				}
+			}
+		}
+	]
+}</con:request>
+            <con:originalUri>http://10.0.35.10/raport-ext/poz</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d3513e81-85ee-422a-b812-58a8176fecd5" name="Status 200">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="e83bc5e5-7815-43e5-bd32-0446be7dd72d" name="Posiada wszystkie nagłówki wymagane dla raportu PACPOZ">
+              <con:configuration><token>pacjent_id;pacjent_pesel;pacjent_imie;pacjent_nazwisko;pacjent_paszport;pacjent_dowod_os;pacjent_npwz;pacjent_zawod_medyczny;dekl_id;dekl_podmiot;dekl_placowka;dekl_kanal;dekl_data_wystawienia;dekl_status;dekl_liczba_wszystkich</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+  <con:entry key="Authorization" value="Bearer ${Generowanie tokena dostępowego#tokenDostepowy}"/>
+  <con:entry key="idRaportu" value="${#Project#idRaportu2}"/>
+  <con:entry key="Kontekst-uuidZdarzeniaInicjujacego" value="${#TestCase#uuid}"/>
+  <con:entry key="serviceId" value="${#Project#serviceId}"/>
+  <con:entry key="placowka" value="${#Project#idMiejscaPracyOidRoot}:${#Project#idMiejscaPracyOidExt}"/>
+  <con:entry key="podmiot" value="${#Project#idPodmiotuOidRoot}:${#Project#idPodmiotuOidExt}"/>
+</con:parameters>
+            <con:parameterOrder>
+              <con:entry>Kontekst-uuidZdarzeniaInicjujacego</con:entry>
+              <con:entry>serviceId</con:entry>
+              <con:entry>idRaportu</con:entry>
+              <con:entry>placowka</con:entry>
+              <con:entry>Authorization</con:entry>
+              <con:entry>podmiot</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep><con:properties>
+        
+        
+        
+        
+        
+        
+      </con:properties>
+    </con:testCase>
+    <con:properties>
+      
+      
+      
+      
+    </con:properties>
+  </con:testSuite><con:properties>
+    <con:property><con:name>ServiceAddress</con:name><con:value>https://isus.ezdrowie.gov.pl</con:value></con:property><con:property>
+      <con:name>---- Dane testowe ----</con:name>
+      <con:value/>
+    </con:property>
+    
+    
+    
+    
+    <con:property><con:name>uuid</con:name><con:value>ca1784f9-574e-4ab9-9a07-d3ff8ca62458</con:value></con:property><con:property><con:name>serviceId</con:name><con:value>MZT.POZ.RAPORTY</con:value></con:property><con:property><con:name>idRaportu1</con:name><con:value>COVID</con:value></con:property><con:property><con:name>idRaportu2</con:name><con:value>PACPOZ</con:value></con:property>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <con:property><con:name>---- Dane MUŚ ----</con:name><con:value/></con:property><con:property><con:name>idPodmiotuOidRoot</con:name><con:value>2.16.840.1.113883.3.4424.2.3.1</con:value></con:property><con:property><con:name>idPodmiotuOidExt</con:name><con:value>000000012106</con:value></con:property><con:property><con:name>idMiejscaPracyOidRoot</con:name><con:value>2.16.840.1.113883.3.4424.2.3.3</con:value></con:property><con:property><con:name>idMiejscaPracyOidExt</con:name><con:value>001</con:value></con:property><con:property><con:name>---- Dane pracownika medycznego ----</con:name><con:value/></con:property><con:property><con:name>idPracownikaOidRoot</con:name><con:value>2.16.840.1.113883.3.4424.1.6.2</con:value></con:property><con:property><con:name>idPracownikaOidExt</con:name><con:value>2698040</con:value></con:property><con:property><con:name>rolaPracownika</con:name><con:value>LEK</con:value></con:property><con:property>
+      <con:name>---- Dane tokena ----</con:name>
+      <con:value/>
+    </con:property>
+    <con:property><con:name>aliasCertyfikatu</con:name><con:value>Podmiot_leczniczy_1-uwierzytelnienie danych</con:value></con:property><con:property><con:name>hasloCertyfikatu</con:name><con:value>LSQFX6aknj</con:value></con:property><con:property><con:name>grantTypeParam</con:name><con:value>client_credentials</con:value></con:property><con:property>
+      <con:name>plikCertyfikatu</con:name>
+      <con:value>Podmiot_leczniczy_1-wss.p12</con:value>
+    </con:property>
+    
+    
+    
+    <con:property>
+      <con:name>scopeParam</con:name>
+      <con:value>https://ezdrowie.gov.pl/fhir</con:value>
+    </con:property>
+    <con:property>
+      <con:name>assertionTypeParam</con:name>
+      <con:value>urn:ietf:params:oauth:client-assertion-type:jwt-bearer</con:value>
+    </con:property>
+    <con:property><con:name>aud</con:name><con:value>https://ezdrowie.gov.pl/token</con:value></con:property><con:property><con:name>jti</con:name><con:value>ae521a51-7117-44c6-895b-75ba4cbaac15</con:value></con:property><con:property><con:name>exp</con:name><con:value>1687340737</con:value></con:property>
+    
+    
+    
+  </con:properties>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>

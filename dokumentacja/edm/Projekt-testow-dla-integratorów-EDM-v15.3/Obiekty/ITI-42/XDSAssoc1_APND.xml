@@ -1,0 +1,19 @@
+        <rim:Association associationType="urn:ihe:iti:2007:AssociationType:APND"
+						 id="@@XDSAssociationID1_APND@@~{f04988a0-1111-4dff-b660-1f5c78c622c0}~"
+						 sourceObject="@@DocumentEntryEntryUUID1@@~{urn:uuid:23f6e7b3-1111-1111-1111-4ca4f7fb1ef8}~"
+						 targetObject="@@DocumentEntryEntryUUIDtarget@@~{urn:uuid:23f6e7b3-0000-0000-0000-4ca4f7fb1ef8}~">
+			<rim:Classification classificationScheme="urn:uuid:abd807a3-4432-4053-87b4-fd82c643d1f3"
+								classifiedObject="IdExample_042"
+                                id="IdExample_043"
+								objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification"
+								nodeRepresentation="LanguageExample">
+                <rim:Name>
+                    <rim:LocalizedString value="Translation into LanguageExample"/>
+                </rim:Name>
+                <rim:Slot name="codingScheme">
+                    <rim:ValueList>
+                        <rim:Value>Example translation types</rim:Value>
+                    </rim:ValueList>
+                </rim:Slot>
+            </rim:Classification>
+        </rim:Association>

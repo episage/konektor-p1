@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema attributeFormDefault="unqualified" blockDefault="substitution" elementFormDefault="unqualified" targetNamespace="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13" version="wd 12" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xacml-context="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:xacml-saml="urn:oasis:names:tc:xacml:3.0:profile:saml2.0:v2:schema:assertion:wd-13" xmlns:xacml="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+  <annotation>
+    <documentation>Document identifier: xacml-3.0-profile-saml2.0-v2-schema-assertion-wd-13
+          Location: TBD</documentation>
+  </annotation>
+  <import namespace="urn:oasis:names:tc:SAML:2.0:assertion" schemaLocation="ObslugaWeryfikacjiDostepuDoDanychWS_1.xsd"/>
+  <import namespace="urn:oasis:names:tc:xacml:3.0:core:schema:wd-17" schemaLocation="ObslugaWeryfikacjiDostepuDoDanychWS_1_2_3_4.xsd"/>
+  <complexType name="XACMLAuthzDecisionStatementType">
+    <complexContent>
+      <extension base="saml:StatementAbstractType">
+        <sequence>
+          <element ref="xacml-context:Response"/>
+          <element minOccurs="0" ref="xacml-context:Request"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="XACMLPolicyStatementType">
+    <complexContent>
+      <extension base="saml:StatementAbstractType">
+        <sequence>
+          <choice maxOccurs="unbounded" minOccurs="0">
+            <element ref="xacml-context:Policy"/>
+            <element ref="xacml-context:PolicySet"/>
+          </choice>
+          <element minOccurs="0" ref="xacml-saml:ReferencedPolicies"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="ReferencedPolicies" type="xacml-saml:ReferencedPoliciesType"/>
+  <complexType name="ReferencedPoliciesType">
+    <sequence>
+      <choice maxOccurs="unbounded" minOccurs="0">
+        <element ref="xacml-context:Policy"/>
+        <element ref="xacml-context:PolicySet"/>
+      </choice>
+    </sequence>
+  </complexType>
+</schema>

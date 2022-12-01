@@ -1,0 +1,52 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0" xmlns:urn1="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0" xmlns:urn2="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0">
+    <soapenv:Body>
+        <urn:AdhocQueryResponse status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Success">
+            <rim:RegistryObjectList xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0">
+                <rim:RegistryPackage id="urn:uuid:481004dd-b83f-49da-b0c1-aa255aad7e9f">
+                    <rim:Slot name="urn:extpl:SlotName:TaskStartTime">
+                        <rim:ValueList>
+                            <rim:Value>20210428074849</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Slot name="urn:extpl:SlotName:TaskStopTime">
+                        <rim:ValueList>
+                            <rim:Value>20210428085110</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Classification classifiedObject="urn:uuid:481004dd-b83f-49da-b0c1-aa255aad7e9f"
+                                        nodeRepresentation=""
+                                        classificationScheme="urn:extpl:ClassificationScheme:UpdateDocumentAvailability"
+                                        objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification"
+                                        id="urn:uuid:c6a32621-910f-4f95-abd7-ab5305f45551">
+                        <rim:Slot name="XDSDocumentEntry.uniqueId">
+                            <rim:ValueList>
+                                <rim:Value>2.16.840.1.113883.3.4424.2.7.778^9973396.8071068</rim:Value>
+                            </rim:ValueList>
+                        </rim:Slot>
+                        <rim:Slot name="documentAvailability">
+                            <rim:ValueList>
+                                <rim:Value>urn:ihe:iti:2010:DocumentAvailability:Offline</rim:Value>
+                            </rim:ValueList>
+                        </rim:Slot>
+                    </rim:Classification>
+                    <rim:Classification classifiedObject="urn:uuid:481004dd-b83f-49da-b0c1-aa255aad7e9f"
+                                        nodeRepresentation=""
+                                        classificationScheme="urn:extpl:ClassificationScheme:UpdateDocumentAvailability"
+                                        objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification"
+                                        id="urn:uuid:d855eb77-2ecd-46dc-a001-1bf476176cea">
+                        <rim:Slot name="XDSDocumentEntry.uniqueId">
+                            <rim:ValueList>
+                                <rim:Value>2.16.840.1.113883.3.4424.2.7.778^2239431.6155718</rim:Value>
+                            </rim:ValueList>
+                        </rim:Slot>
+                        <rim:Slot name="documentAvailability">
+                            <rim:ValueList>
+                                <rim:Value>urn:ihe:iti:2010:DocumentAvailability:Offline</rim:Value>
+                            </rim:ValueList>
+                        </rim:Slot>
+                    </rim:Classification>
+                </rim:RegistryPackage>
+            </rim:RegistryObjectList>
+        </urn:AdhocQueryResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

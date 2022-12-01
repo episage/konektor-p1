@@ -1,0 +1,56 @@
+Zmiany w wersji 16.3.5 (2022-09-15)
+-----------------------------------
+* Brak zmian w testach SOAPUI względem wersji 16.3.4
+
+Zmiany w wersji 16.3.4 (2022-09-02)
+-----------------------------------
+* Poprawa nazw kroków związanych z podpisem w ST "Zapis i wyszukanie szczepień pacjenta"
+
+Zmiany w wersji 16.3.3 (2022-08-11)
+-----------------------------------
+* Brak zmian w testach SOAPUI względem wersji 16.3.2
+
+Zmiany w wersji 16.3.2 (2022-08-01)
+-----------------------------------
+* Brak zmian w testach SOAPUI względem wersji 16.3.1
+
+Zmiany w wersji 16.3.1 (2022-07-13)
+-----------------------------------
+* Brak zmian w testach SOAPUI względem wersji 16.3.0
+
+Zmiany w wersji 16.3.0 (2022-07-08)
+-----------------------------------
+* Do obiektów "observation-pregnacy-poj.xml" oraz "observation-pregnacy-mng-zakonczona.xml" zmodyfikowano węzeł baseOn - opcjonalność identifier.value oraz dodanie pola display.  
+* Dla obiektów "patient.xml", "patient-noworodek-ciaza-mng-paszport.xml", "patient-noworodek-ciaza-poj-pesel.xml", "patient-paszport.xml", "patient-paszport-mod.xml" usunięto węzeł address. 
+
+Zmiany w wersji 16.2.0 (2022-06-20)
+-----------------------------------
+* Dla przypadku testowego "Rejestracja informacji o wadze, wzroście, obwodzie pasa, bmi i miarowości rytmu serca pacjenta oraz używaniu wyrobów tytoniowych przez pacjenta, ciśnieniu krwi pacjenta i grupie krwi pacjenta" dodano zasób Observation o profilu PLBloodGroup - przykład dla grupy krwi
+* Dodano nowy obiekt dla zasobu Observation o profilu PLBloodGroup - "observation-krew-pesel.xml"
+* Dla obiektu "provenance-waga-wzrost-palenie.xml" dodano do podpisu zasób Observation o profilu PLBloodGroup
+* Dla obiektu "observation-pregnacy.xml" zmieniono na obiekt "observation-pregnacy-poj.xml"
+* Dodano nowy obiekt dla zasobu Observation o profilu Pregnancy - "observation-pregnacy-mng-zakonczona.xml"
+* Dla przypadku testowego "Rejestracja informacji o alergiach oraz historii ciąży pacjentki z numerem PESEL" zmieniono szablon profilu z observation-pregnacy.xml na observation-pregnacy-poj.xml
+* Dodano nowy przypadek testowy "Rejestracja informacji historii ciąży mnogiej pacjentki z numerem PESEL - zakończonej"
+* Do obiektów "observation-pregnacy-poj.xml" oraz "observation-pregnacy-mng-zakonczona.xml" dodano węzeł baseOn 
+
+Zmiany w wersji 16.1.3 (2022-02-24)
+-----------------------------------
+* Brak zmian w testach SOAPUI względem wersji 16.1.2
+
+Zmiany w wersji 16.1.2 (2022-01-11)
+-----------------------------------
+* Brak zmian w testach SOAPUI względem wersji 16.1.1
+
+Zmiany w wersji 16.1.1 (2021-12-30)
+-----------------------------------
+* Brak zmian biznesowych w testach SOAPUI względem wersji 16.1
+* Dla obiektu "observation-obwód-pesel.xml" zmieniono "LP35925-4" na "56114-2" oraz "Body mass index (BMI)" na "Waist Circumference by NHANES".
+* Dla obiektu "observation-miarowosc-pesel.xml" zmieniono "urn:oid:2.16.840.1.113883.6.1" na "urn:oid:2.16.840.1.113883.3.4424.11.2.6", "LP35925-4" na "89.59" i "Body mass index (BMI)" na "Inne nieinwazyjne badania serca i układu naczyniowego".
+* Dla obiektu "observation-kwalifikacja.xml" zmieniono "pre_vaccination_exam" na "medical_examination_for_vaccination"
+* Dla obiektu "encounter-hospitalizacja-koniec.xml" zmieniono "https://ezdrowie.gov.pl/fhir/CodeSystem/PLMedicalEventCodeSystemAdmitSource" na "urn:oid:2.16.840.1.113883.3.4424.11.3.24"
+
+Zmiany w wersji 16.1.0 (2021-12-03)
+-----------------------------------
+* Brak zmian biznesowych w testach SOAPUI względem wersji 16.0.5
+* Podmiana certyfikatu asystenta 'Asystent.p12' w podkatalogu 'klucze'

@@ -1,0 +1,58 @@
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+@@technical_id@@
+   <meta>
+      <versionId value="1"/>
+      <lastUpdated value="2020-03-12T07:44:07.642+00:00"/>
+	  <source value="#fX1gpBfjfHJGEEaB"/>
+	  <profile value="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLAllergyIntolerance"/>
+	  <security>
+            <system value="urn:oid:2.16.840.1.113883.3.4424.11.1.83"/>
+            <code value="@@poziom_poufnosci@@~{N}~"/>
+       </security>
+   </meta>
+   <clinicalStatus>
+      <coding>
+         <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+         <code value="active"/>
+         <display value="Active"/>
+      </coding>
+   </clinicalStatus>
+   <type value="allergy"/>
+   <category value="food"/>
+   <code>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="102259006"/>
+         <display value="Cashew nuts"/>
+      </coding>
+   </code>
+	<patient>
+		<reference value="Patient/@@patientId@@~{1234}~"/>
+        <type value="Patient"/>
+		<identifier>
+            <system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+            <value value="@@identyfikatorPacjenta@@~{12300509785}~"/>
+        </identifier>
+		<display value="@@imieNazwiskoPacjenta@@~{ANNA KASINA}~"/>
+    </patient>
+   <recordedDate value="@@zdarzenieDataPoczatek@@~{2020-02-28T12:29:01.029}~"/>
+   <recorder>
+           <identifier>
+            <system value="urn:oid:2.16.840.1.113883.3.4424.1.1.616" />
+            <value value="00210125944"/>
+        </identifier>
+		<display value="test"/>
+   </recorder>
+   <note>
+      <text value="The criticality is high becasue of the observed anaphylactic reaction when challenged with cashew extract."/>
+   </note>
+   <reaction>
+	  <manifestation>
+         <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="126485001"/>
+            <display value="Anaphylactic reaction"/>
+         </coding>
+      </manifestation>
+   </reaction>
+</AllergyIntolerance>

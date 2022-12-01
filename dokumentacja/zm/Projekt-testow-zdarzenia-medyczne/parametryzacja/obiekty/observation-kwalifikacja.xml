@@ -1,0 +1,56 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<meta>
+		<profile value="@@profilKwalifikacja@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLMedicalCertificate}~"/>
+		<security>
+			<system value="@@poziomPoufnosciSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.83}~"/>
+			<code value="@@poziomPoufnosciKod@@~{N}~"/>
+	  </security>
+	</meta>
+	<extension url="@@profilExt@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLLocation}~">
+		<valueIdentifier>	
+					<system value="@@locationOID@@~{urn:oid:2.16.840.1.113883.3.4424.2.3.3}~"/>
+					<value value="@@locationIdentyfikator@@~{000000001027-001}~"/>
+		</valueIdentifier>	
+	</extension>
+	<extension url="@@profilExt@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLMedicalCertificatePurpose}~">
+			<valueCoding>
+				<system value="urn:oid:2.16.840.1.113883.3.4424.11.2.6"/>
+				<code value="@@typProceduryKod@@~{99.557}~"/>
+				<display value="@@typProceduryNazwa@@~{Szczepienie przeciw COVID-19}~"/>
+			</valueCoding>
+	</extension>
+	<status value="@@statusKwalifikacja@@~{final}~"/>
+	<code>
+		<coding>
+			<system value="@@typKwalifikacjiSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.114}~"/>
+			<code value="@@typKwalifikacjiKod@@~{medical_examination_for_vaccination}~"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/@@patientId@@~{XX}~"/>
+		<type value="Patient"/>
+		<identifier>
+			<system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+			<value value="@@identyfikatorPacjenta@@~{40010151673}~"/>
+		</identifier>
+		<display value="@@pacjentDisplay@@~{Sylwester Senior}~"/>
+	</subject>
+	<issued value="@@wydanieKwalifikacjiData@@~{2019-08-26T16:00:00+02:00}~"/>
+	<performer>
+		<identifier>
+			<system value="@@pracownikOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.6.2}~"/>
+			<value value="@@pracownikIdentyfikator@@~{2698040}~"/>
+		</identifier>
+		<display value="@@pracownikImieNazwisko@@~{Monika Lecznicza}~"/>
+	</performer>
+	<valueCodeableConcept>
+		<coding>
+			<system value="@@kwalifikacjaSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.113}~"/>
+			<code value="@@kwalifikacjaKod@@~{qualified}~"/>
+			<display value="@@opisKwalifikacjiDisplay@@~{Zakwalifikowany}~"/>
+		</coding>
+	</valueCodeableConcept>
+	<note>
+		<text value="Notes on adminstration of vaccine"/>
+	</note>
+</Observation>

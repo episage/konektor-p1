@@ -1,0 +1,5 @@
+				<!-- Asocjacje SubmissionSet -> DocumentEntry -->
+				<rim:Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember"
+								 id="@@XDSAssociationID1_SSFD@@~{765d4cd9-d370-4021-9bfa-637f163d155a}~"
+								 sourceObject="@@SubmitObjectsRequestID@@~{urn:uuid:11111111-0000-406c-8ffa-14c117944197}~"
+								 targetObject="@@FolderUUID1@@~{urn:uuid:8deccf09-d157-555-0001-30d7ea69d37e}~"/>

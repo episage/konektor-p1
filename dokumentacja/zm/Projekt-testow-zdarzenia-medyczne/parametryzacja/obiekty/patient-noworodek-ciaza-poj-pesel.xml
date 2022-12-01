@@ -1,0 +1,24 @@
+<Patient xmlns="http://hl7.org/fhir">
+    <meta>
+        <profile value="@@profilPacjenta@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLPatient}~" />
+        <security>
+            <system value="urn:oid:2.16.840.1.113883.3.4424.11.1.83"/>
+            <code value="@@poziom_poufnosci@@~{N}~"/>
+        </security>
+    </meta>
+    <identifier>
+        <system value="@@identyfikatorMatkaPosiadajacaPeselOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.7.1.616}~" />
+        <value value="@@identyfikatorMatkiPesel@@~{81050913126-20200327-01}~" />
+    </identifier>
+    <name>
+        <family value="@@nazwisko@@~{Nowak}~"/>
+        <given value="@@imie@@~{Joanna}~"/>
+    </name>
+    <telecom>
+        <system value="@@daneKontaktowe1Kod@@~{phone}~"/>
+        <value value="@@daneKontaktowe1@@~{+48666666666}~"/>
+    </telecom>
+    <gender value="@@plec@@~{male}~"/>
+    <birthDate value="@@dataUrodzenia@@~{2020-01-30}~"/>
+    <multipleBirthBoolean value="false" />
+</Patient>

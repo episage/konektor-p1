@@ -1,0 +1,34 @@
+<Patient xmlns="http://hl7.org/fhir">
+   <meta>
+      <profile value="@@profilPacjenta@@~{https://ezdrowie.gov.pl/fhir/StructureDefinition/PLPatient}~"/>
+	  <security>
+			<system value="@@poziomPoufnosciSlownik@@~{urn:oid:2.16.840.1.113883.3.4424.11.1.83}~"/>
+			<code value="@@poziomPoufnosciKod@@~{N}~"/>
+	  </security>
+   </meta>
+   <identifier>
+      <system value="@@identyfikatorPacjentaOID@@~{urn:oid:2.16.840.1.113883.3.4424.1.1.616}~"/>
+      <value value="@@identyfikatorPacjenta@@~{12300509785}~"/>
+   </identifier>
+   <name>
+      <family value="@@nazwisko@@~{KASINA}~"/>
+      <given value="@@imie@@~{ANNA}~"/>
+   </name>
+   <telecom>
+      <system value="@@daneKontaktowe1Kod@@~{phone}~"/>
+      <value value="@@daneKontaktowe1@@~{+48666666666}~"/>
+   </telecom>   
+   <telecom>
+      <system value="@@daneKontaktowe2Kod@@~{email}~"/>
+      <value value="@@daneKontaktowe2@@~{pacjent@nfz.pl}~"/>
+   </telecom>
+   <address>
+        <extension url="https://ezdrowie.gov.pl/fhir/StructureDefinition/PLTerritorialDivisionCode">
+            <valueCode value="@@teryt@@~{1465108}~"/>
+        </extension>
+        <line value="@@adresUlica@@~{ul. Stanisława Dubois 5A}~"/>
+        <city value="@@adresMiejscowosc@@~{Warszawa}~"/>
+        <postalCode value="@@adresKodPocztowy@@~{00-184}~"/>
+        <country value="@@adresKraj@@~{PL}~"/>
+    </address>   
+</Patient>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> <html xmlns=http://www.w3.org/1999/xhtml xml:lang=pl lang=pl slick-uniqueid=3 style><!--
+ Page saved with SingleFile 
+ url: https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/dictionaries.html 
+ saved date: Thu Dec 01 2022 13:53:41 GMT+0100 (Central European Standard Time)
+--><meta charset=utf-8>
+<title>Słowniki: plcda- Zestawienie DECOR (elementy danych, kody, OIDy i reguły)</title>
+<style>:root{--sf-img-1: url("data:image/png;base64,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")}*{font-family:Verdana,Arial,sans-serif;font-size:12px;font-weight:normal;color:#333333}:focus{outline:none}h1{font-size:16px;font-weight:bold;color:#e16e22}h2{font-size:14px;font-weight:bold;background-color:#ece9e4;color:#e16e22;width:auto}a:link{color:green}a:visited{color:green}a:hover{color:red}a:active{color:yellow}div{margin-left:0px;margin-right:0px;margin-top:0px;margin-bottom:4px;text-align:left;vertical-align:top}table.title{border:0px;margin:0px;padding:0px;width:100%}th{background-color:#ece9e4;color:#7a6e62;font-weight:bold}div.tabtab{border:1px solid #C0C0C0;background-color:#FFFFFF}tr.headinglabel{background-color:#99CCFF}.comment{font-size:12px;color:#999999}#TabbedPanel{border-bottom:1px solid #CCCCCC;margin:0;padding:0;float:left;clear:none;width:100%}#TabbedPanel li{display:inline;border-top:.1em solid #CCCCCC;border-left:.1em solid #CCCCCC;border-right:.1em solid #CCCCCC;-moz-user-select:none;-moz-border-top-left-radius:5px;-moz-border-top-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;position:relative;top:1px;float:left;padding:4px 10px;margin:0px 1px 0px 0px;font:bold 12px sans-serif;list-style:none;cursor:pointer}#TabbedPanel li a{font:inherit;text-decoration:none;padding:0.25em 1em;color:#FFFFFF}.TabbedPanelsTabSelected,.TabbedPanelsTabNotSelected:hover{border-bottom:5px solid #e16e22;background-color:#e16e22;color:white}.TabbedPanelsTabNotSelected{border-bottom:.1em solid #7a6e62;background-color:#7a6e62;color:white}.TabbedPanelsContent{padding:30px 10px;background-color:#F6F3EE}img.tipsz{width:15px;height:15px}</style>
+<link href="data:image/vnd.microsoft.icon;base64,AAABAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8AAFD4APjw8ACIqOAA6ODYADh42AA4UNAAoODIAFC4yADIsMgAiICoAEBAmABA2HgAiFhwANiYaAAAAAAA///////////////////////////////////////////////////////0reT/////////////////nd3dT///////////9O7//93d3a///////////07uT/nd3d3f///////////u7u/03d3dr///////////7u5P/63d3Z8zP////////0Tp///63dnzYRP////3n///9P9//0//8REW////u7tZ//8xgRP///ERFf//lru7tp/4ERERj/8zEVP//2u7u7u/NRERERj3//T///q7u7u7s1EREREV//9HT/9Lu7u7u7VREREREX/0zMxP+7u7u7u2ERERERH//MzMf/a7u7u7sxERERERT8zMzM/5u7u7u78RERERE/98zMzP/6u7u7uf9REREV//TMzMf//5W7uv//SBEVNP//fMx/////+f////9PT/Tu////////////////f/9O7u//////////////////7u7v/////////////3zH/+7u7/////////////zMzH/+7k////////////98zMzP////////////////zMzMxP///////////////8zMzM////////////////98zMx/////////////////98zH//////////////////////////////////////////////////////////////////4P///8B//+PAf//BgH//wYB//8HAR//D4IP5+3eD8DwPg8AYBwPAEALvgAADxwAAAYGAAAOBgAABAYAQAwHAGAcB4HgHg/3+sf///uD////g///4YP//8DD//+A////gH///4D///+A////wf////////////w==" rel="shortcut icon" type=image/x-icon><link rel=canonical href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/dictionaries.html><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+ <body>
+ <table class=title>
+ <tbody><tr>
+ <td style=text-align:left>
+ <h1>Informacje DECOR dla projektu: Polska Implementacja Krajowa HL7 CDA (wersja 1.3.2)
+ (plcda-)
+ </h1>
+ </td>
+ </tr>
+ </table>
+ <ul id=TabbedPanel>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/index.html>Strona główna</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/project.html>Informacje o projekcie</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/scenarios.html>Scenariusze</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/identifiers.html>Identyfikatory</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/valuesets.html>Zbiory wartości</a></li>
+ <li class=TabbedPanelsTabSelected>Słowniki</li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/rules.html>Wszystkie szablony</a></li>
+ <li class=TabbedPanelsTabNotSelected><a href=https://www.cez.gov.pl/HL7POL-1.3.2/plcda-html-1.3.2/plcda-html/visualization.html>Wizualizacja</a></li>
+ </ul>
+ <div class=TabbedPanelsContent>
+ <h2>Słowniki</h2>
+ <div id=Accordiondc class=Accordion>
+ <div class=tabtab>
+ <table id=transactionTable class=treetable width=100% border=0 cellspacing=0 cellpadding=5>
+ <tbody><tr>
+ <th class=columnName>Nazwa</th>
+ </tr>
+ <tr data-tt-id=d18702e3 style=background-color:rgb(246,243,238)>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Polskie Klasyfikatory HL7 v3&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e3-desc data-tt-parent-id=d18702e3>
+ <td style="'padding-left: 2em;')" class="columnDesc comment"></td>
+ </tr>
+ <tr data-tt-id=d18702e5 style=background-color:rgb(246,243,238)>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Rodzaj leku&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e5-desc data-tt-parent-id=d18702e5>
+ <td style="'padding-left: 2em;')" class="columnDesc comment"></td>
+ </tr>
+ <tr data-tt-id=d18702e7 style=background-color:rgb(246,243,238)>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Tryb wystawienia recepty&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e7-desc data-tt-parent-id=d18702e7>
+ <td style="'padding-left: 2em;')" class="columnDesc comment"></td>
+ </tr>
+ <tr data-tt-id=d18702e9 style=background-color:rgb(246,243,238)>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Tryb realizacji recepty&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e9-desc data-tt-parent-id=d18702e9>
+ <td style="'padding-left: 2em;')" class="columnDesc comment"></td>
+ </tr>
+ <tr data-tt-id=d18702e11 style=background-color:rgb(246,243,238)>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Rodzaj świadczenia uzdrowiskowego&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e11-desc data-tt-parent-id=d18702e11>
+ <td style="'padding-left: 2em;')" class="columnDesc comment"></td>
+ </tr>
+ <tr data-tt-id=d18702e14 style=background-color:rgb(246,243,238)>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Rodzaj uzdrowiska&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e14-desc data-tt-parent-id=d18702e14>
+ <td style="'padding-left: 2em;')" class="columnDesc comment"></td>
+ </tr>
+ <tr data-tt-id=d18702e16 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Tryb zlecenia na zaopatrzenie&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e16-desc data-tt-parent-id=d18702e16>
+ <td style="'padding-left: 2em;')" class="columnDesc comment"></td>
+ </tr>
+ <tr data-tt-id=d18702e18 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Rodzaj recepty papierowej&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e18-desc data-tt-parent-id=d18702e18>
+ <td style="'padding-left: 2em;')" class="columnDesc comment"></td>
+ </tr>
+ <tr data-tt-id=d18702e20 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Rodzaj realizacji recepty&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e20-desc data-tt-parent-id=d18702e20>
+ <td style="'padding-left: 2em;')" class="columnDesc comment"></td>
+ </tr>
+ <tr data-tt-id=d18702e22 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Rodzaje czynności związanych z wystawieniem i realizacją recepty&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e22-desc data-tt-parent-id=d18702e22>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;CDSC</td>
+ <td>Potwierdzenie całkowitej dawki substancji czynnej</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;PRLR</td>
+ <td>Przyjęcie do realizacji leku recepturowaego</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;PLR</td>
+ <td>Przygotowanie leku recepturowego</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;PLRA</td>
+ <td>Przygotowanie leku recepturowego w warunkach aseptycznych</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e24 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Postać recepty&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e24-desc data-tt-parent-id=d18702e24>
+ <td style="'padding-left: 2em;')" class="columnDesc comment"></td>
+ </tr>
+ <tr data-tt-id=d18702e27 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik nazw skal ocen pielęgniarskich&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e27-desc data-tt-parent-id=d18702e27>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SADL</td>
+ <td>ADL - Samodzielność pacjenta w zakresie podstawowych czynności życiowych</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SNMOCZDO</td>
+ <td>Skala trzymania moczu - opieka długoterminowa</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SNMOCZSO</td>
+ <td>Skala trzymania moczu - stany ostre</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SBOLSZ</td>
+ <td>Skala oceny bólu podczas pobytu w szpitalu/24h</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SBOLDT</td>
+ <td>Skala oceny bólu w opiece długoterminowej</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SZMEC</td>
+ <td>Skala oceny zmęczenia</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SDUSZ</td>
+ <td>Skala oceny duszności</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SNUDN</td>
+ <td>Skala oceny nudności</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SUPASZ</td>
+ <td>Skala oceny upadków podczas hospitalizacji</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SUPADT</td>
+ <td>Skala oceny upadków w ostatnim okresie/pól roku</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SODL</td>
+ <td>Skala klasyfikacji odleżyn</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e29 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla ocen ADL&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e29-desc data-tt-parent-id=d18702e29>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;SAM</td>
+ <td>Samodzielność pacjenta</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>niezależny</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>wymagający okresowej pomocy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>potrzebujący nadzoru</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+ <td>niewielki zakres ograniczenia opieki</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+ <td>zwiększony zakres opieki/pomocy osób</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;5</td>
+ <td>wymagający pełnej opieki</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;6</td>
+ <td>całkowita zależność</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e31 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla skali oceny duszności&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e31-desc data-tt-parent-id=d18702e31>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;DUSZ</td>
+ <td>Stopień duszności</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>bez symptomów duszności</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>nieobecna przy odpoczynku, pojawiający się przy średniej aktywności</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>nieobecna przy odpoczynku, pojawiający się przy normalnych codziennych czynnościach</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+ <td>obecna przy spoczynku</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e33 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla intensywności bólu&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e33-desc data-tt-parent-id=d18702e33>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;BOLINT</td>
+ <td>Intensywność bólu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;5</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;6</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;7</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;8</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;9</td>
+ <td></td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;10</td>
+ <td></td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e35 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla skali nietrzymania moczu w opiece domowej&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e35-desc data-tt-parent-id=d18702e35>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;NMOCZDO</td>
+ <td>Stopień trzymania moczu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>trzymanie moczu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>okazjonalne nietrzymanie moczu, 1 raz w tygodniu lub mniej</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>okresowe nietrzymanie 2 razy na tydzień</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+ <td>częste nietrzymanie moczu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+ <td>nietrzymanie moczu</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e37 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla skali nietrzymania moczu w stanach ostrych&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e37-desc data-tt-parent-id=d18702e37>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;NMOCZSO</td>
+ <td>Stopień trzymania moczu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>trzymanie moczu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>wymaga okresowego cewnikowania/24h</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>wymaga kontroli przez urostomię /24h</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+ <td>okresowe nietrzymanie moczu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+ <td>częste nietrzymanie moczu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;5</td>
+ <td>nietrzymanie moczu</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e40 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla skali oceny nudności&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e40-desc data-tt-parent-id=d18702e40>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;NUDN</td>
+ <td>Stopień nudności</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>brak nudności</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>nudności okazjonalnie odczuwane i nie związane z jedzeniem i nie dokuczające przy
+ aktywności codziennej
+ </td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>nudności umiarkowane, częściowo związane z jedzeniem lub aktywnością w większości
+ dni
+ </td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+ <td>ociężkie nudności, codziennie, powiązane z jedzeniem i/lub aktywnością</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+ <td>nudności silne, obezwładniające nawet w łóżku, przy jedzeniu i aktywnościach dnia
+ codziennego
+ </td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e42 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla skali klasyfikacji odleżyn&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e42-desc data-tt-parent-id=d18702e42>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;ODL</td>
+ <td>Stopień odleżyn</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>brak odleżyny</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>I stopień - okolica ciała w której zaczerwienienie skóry nie znika po uciśnięciu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>II stopień - częściowa utrata grubości skóry, w której wystąpiło otarcie, pęcherz,
+ płytki krater
+ </td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+ <td>III stopień - utrata całej grubości skóry, pokazująca tkankę podskórną - ukazując
+ głęboką ranę z lub bez kolejnej warstwy tkanek
+ </td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+ <td>IV stopień - okolica ciała w której rana ukazuje tkankę podskórną, mięśnie czy kość</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e44 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla skali oceny upadków w ostatnim okresie/pól roku&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e44-desc data-tt-parent-id=d18702e44>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;UPADT</td>
+ <td>Częstotliwość upadków</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>bez upadku</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>1 upadek w ostatnich 31-180 dniach (pół roku)</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>1 upadek w ostatnich 30 dniach</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e46 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla skali oceny upadków podczas hospitalizacji&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e46-desc data-tt-parent-id=d18702e46>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;UPASZ</td>
+ <td>Częstotliwość upadków</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>90 dni bez upadku</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>bez upadku 30 dni (występowały od 31-90 dni temu)</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>1 upadek w ostatnich 30 dniach</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+ <td>2 upadki lub więcej w ostatnich 30 dniach</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e48 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla częstotliwości występowania bólu w opiece długoterminowej&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e48-desc data-tt-parent-id=d18702e48>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;BOLDT</td>
+ <td>Częstotliwość występowania bólu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>brak bólu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>mniej niż codziennie</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>codzienny ból</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e50 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla częstotliwości występowania bólu w szpitalu&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e50-desc data-tt-parent-id=d18702e50>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;BOLSZ</td>
+ <td>Częstotliwość występowania bólu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>brak bólu</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>ból wystąpił, ale nie w ostatnich 24h</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>ból ujawnił się w ciągu ostatnich 24h</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e53 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik wartości dla skali oceny zmęczenia&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e53-desc data-tt-parent-id=d18702e53>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;ZMECZ</td>
+ <td>Stopień zmęczenia</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;0</td>
+ <td>brak zmęczenia</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;1</td>
+ <td>minimalne zmęczenie (zmniejszenie energii, pozwalające dokończyć dzień)</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;2</td>
+ <td>średnie zmęczenie (zmęczenie podczas wykonywania czynności)</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;3</td>
+ <td>duże (uniemożliwiające rozpoczęcie czynności dnia codziennego)</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;4</td>
+ <td>uniemożliwiające normalne funkcjonowanie, żadnej czynności dnia codziennego</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e55 style=background-color:#f6f3ee>
+ <td style="border-top:6px solid white" class=columnName><img alt=active src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect fill-opacity="0"/></svg>' class=tipsz title=active data-toggle=tooltip data-placement=bottom style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-1)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">&nbsp;Słownik okolic ciała&nbsp;
+ </td>
+ </tr>
+ <tr data-tt-id=d18702e55-desc data-tt-parent-id=d18702e55>
+ <td style="'padding-left: 2em;')" class="columnDesc comment">
+ <table xmlns border=0 cellspacing=3 cellpadding=2>
+ <tbody><tr class=headinglabel style=vertical-align:top>
+ <th style=text-align:left>Kod</th>
+ <th style=vertical-align:top;text-align:left>Opis</th>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;OKC</td>
+ <td>Okolice ciała</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;001.000.000</td>
+ <td>Głowa</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.001.000</td>
+ <td>Mózgoczaszka</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.001.001</td>
+ <td>Mózg i pozostałe struktury przedniej jamy czaszki (z uwzględnieniem wszystkich opcji
+ badania strukturalnego TK i MR/DWI,DTI)
+ </td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.001.002</td>
+ <td>Mózg- badanie perfuzji mózgowej</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.001.003</td>
+ <td>Mózg-spektroskopia rezonansu magnetycznego</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.001.004</td>
+ <td>Mózg -badanie czynnościowe rezonansu magnetycznego</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.001.005</td>
+ <td>Przysadka mózgowa</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.001.006</td>
+ <td>Móżdżek i pozostałe struktury tylnej jamy czaszki ( z uwzględnieniem wszystkich opcji
+ badania strukturalnego TK i MR/DWI,DTI)
+ </td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.001.007</td>
+ <td>Móżdżek –badanie perfuzji w obrębie móżdżku</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.001.008</td>
+ <td>Móżdżek-spektroskopia MR</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.003.000</td>
+ <td>Twarzoczaszka i podstawa czaszki</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.003.001</td>
+ <td>Oczodoły</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.003.002</td>
+ <td>Zatoki przynosowe</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.003.003</td>
+ <td>Stawy skroniowo-żuchwowe</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.003.004</td>
+ <td>Szczęka i żuchwa (badanie stomatologiczne – TK)</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.003.005</td>
+ <td>Piramida kości skroniowej (uszy)</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;001.003.006</td>
+ <td>Podstawa czaszki</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;002.000.000</td>
+ <td>Szyja</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;002.001.000</td>
+ <td>Krtań</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;002.002.000</td>
+ <td>Gardło</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;003.000.000</td>
+ <td>Klatka piersiowa</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;003.001.000</td>
+ <td>Tchawica/ oskrzela</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;003.002.000</td>
+ <td>Płuca</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;003.003.000</td>
+ <td>Śródpiersie</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;003.004.000</td>
+ <td>Sutek (mammografia-MR)</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;003.005.000</td>
+ <td>Ściana klatki piersiowej</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;003.006.000</td>
+ <td>Przełyk</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;004.000.000</td>
+ <td>Jama brzuszna</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.001.000</td>
+ <td>Jama brzuszna</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.001.001</td>
+ <td>Wątroba</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.001.002</td>
+ <td>Drogi żółciowe i pęcherzyk żółciowy oraz przewody trzustkowe (cholangiopankreatografia
+ rezonansu magnetycznego)
+ </td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.001.003</td>
+ <td>Śledziona</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.001.004</td>
+ <td>Żołądek i dwunastnica</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.001.005</td>
+ <td>Trzustka</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.001.006</td>
+ <td>Nadnercza</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.001.007</td>
+ <td>Nerki</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.001.008</td>
+ <td>Jelito cienkie i jelito grube, w tym wirtualna kolonoskopia TK u pacjentów, u których
+ warunki anatomiczne uniemożliwiają wykonanie kolonoskopii tradycyjnej
+ </td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.002.000</td>
+ <td>Miednica</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.002.001</td>
+ <td>Narząd rodny</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.002.001</td>
+ <td>Gruczoł krokowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.002.001</td>
+ <td>Pęcherz moczowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;004.002.001</td>
+ <td>Odbytnica</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;005.000.000</td>
+ <td>Układ mięśniowo-szkieletowy i nerwowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.001.000</td>
+ <td>Kręgosłup</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.001.001</td>
+ <td>Kręgosłup szyjny</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.001.002</td>
+ <td>Kręgosłup piersiowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.001.003</td>
+ <td>Kręgosłup lędźwiowo-krzyżowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.002.000</td>
+ <td>Miednica</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.002.001</td>
+ <td>Kości miednicy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.002.001</td>
+ <td>Stawy krzyżowo-biodrowe</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.002.001</td>
+ <td>Spojenie łonowe</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.003.000</td>
+ <td>Kończyna górna</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.003.001</td>
+ <td>Staw mostkowo-obojczykowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.003.002</td>
+ <td>Łopatka</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.003.003</td>
+ <td>Bark (staw ramienny i barkowo-obojczykowy)</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.003.004</td>
+ <td>Bark - splot nerwowy barkowy/ramienny</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.003.005</td>
+ <td>Ramię</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.003.006</td>
+ <td>Staw łokciowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.003.007</td>
+ <td>Przedramię</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.003.008</td>
+ <td>Nadgarstek</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.003.009</td>
+ <td>Ręka</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.004.000</td>
+ <td>Kończyna dolna</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.004.001</td>
+ <td>Staw biodrowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.004.002</td>
+ <td>Udo</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.004.003</td>
+ <td>Staw kolanowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.004.004</td>
+ <td>Podudzie</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.004.005</td>
+ <td>Staw skokowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;005.004.006</td>
+ <td>Stopa</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;006.000.000</td>
+ <td>Układ sercowo-naczyniowy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.001.000</td>
+ <td>Serce</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.001.001</td>
+ <td>Tętnice wieńcowe</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.001.002</td>
+ <td>Serce - badanie czynnościowe i morfologiczne tomografii komputerowej</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.001.003</td>
+ <td>Serce- badanie czynnościowe i morfologiczne rezonansu magnetycznego</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.002.000</td>
+ <td>Aorta</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.002.001</td>
+ <td>Piersiowa</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.002.002</td>
+ <td>Brzuszna</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.002.003</td>
+ <td>Tętnice trzewne</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.002.004</td>
+ <td>Tętnice nerkowe</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.003.000</td>
+ <td>Tętnice dogłowowe (szyjne i kręgowe)</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.004.000</td>
+ <td>Tętnice miednicy</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.005.000</td>
+ <td>Żyły szyjne</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.006.000</td>
+ <td>Tętnice wewnątrzczaszkowe</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.007.000</td>
+ <td>Zatoki żylne mózgowia</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.008.000</td>
+ <td>Tętnice kończyn górnych</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.009.000</td>
+ <td>Tętnice kończyn dolnych</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.010.000</td>
+ <td>Żyły kończyn górnych</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.011.000</td>
+ <td>Żyły kończyn dolnych</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.012.000</td>
+ <td>Żyły górnego otworu klatki piersiowej</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.013.000</td>
+ <td>Żyła główna dolna</td>
+ </tr>
+ <tr>
+ <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;006.014.000</td>
+ <td>Żyły miednicy</td>
+ </tr>
+ </table>
+ </td>
+ </tr>
+ </table>
+ </div>
+ </div>
+ </div>
+ <p>Zbiory danych, kody, węzły OID i szablony: informacje przeznaczone są na potrzeby
+ renderowania oraz walidacji.
+ </p>
